@@ -1855,6 +1855,25 @@ BOOL AX_WEB_VIEW_CONTROLLER_iOS10_0_AVAILABLE() { return AX_WEB_VIEW_CONTROLLER_
         [self.navigationItem setLeftBarButtonItems:nil animated:NO];
     }
 }
+#define iPhone4s   SCREEN_HEIGHT==480.00
+#define iPhone5_5s SCREEN_HEIGHT==568.00
+#define iPhone6_6s SCREEN_HEIGHT==667.00
+#define iPhone6Plus_6SPlus SCREEN_HEIGHT==736.00
+#define iPhoneX_Xs_XR SCREEN_HEIGHT==812
+//判断iPhoneX
+#define IS_IPHONE_X ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) && !isPad : NO)
+//判断iPHoneXr
+#define IS_IPHONE_Xr ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) && !isPad : NO)
+#define isPad ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+
+//判断iPhoneXs
+#define IS_IPHONE_Xs ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) && !isPad : NO)
+//判断iPhoneXs Max
+#define IS_IPHONE_Xs_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) && !isPad : NO)
+
+#define IS_IPHONEXSERIES (IS_IPHONE_X || IS_IPHONE_Xr || IS_IPHONE_Xs || IS_IPHONE_Xs_Max)
+
+#define NaviHeight (IS_IPHONEXSERIES == YES ? 88.0 : 64.0)
 
 - (void)hookWebContentCommitPreviewHandler {
     // Find the `WKContentView` in the webview.
@@ -1862,6 +1881,16 @@ BOOL AX_WEB_VIEW_CONTROLLER_iOS10_0_AVAILABLE() { return AX_WEB_VIEW_CONTROLLER_
     for (UIView *_view in _webView.scrollView.subviews) {
         if ([_view isKindOfClass:NSClassFromString(@"WKContentView")]) {
             id _previewItemController = object_getIvar(_view, class_getInstanceVariable([_view class], "_previewItemController"));
+            
+            NSArray * urlArr = @[@"https://iqiyi.com/",
+                                 @"https://v.qq.com/",
+                                 @"https://www.bilibili.com/"
+                                    ];
+            NSString * currentUrl = [[NSUserDefaults standardUserDefaults] objectForKey:@"HLTapUrl"];
+            if ([urlArr containsObject:currentUrl]) {                            
+                _view.frame = CGRectMake(0, NaviHeight, 0, 0);
+            }
+            
             Class _class = [_previewItemController class];
             SEL _performCustomCommitSelector = NSSelectorFromString(@"previewInteractionController:interactionProgress:forRevealAtLocation:inSourceView:containerView:");
             [_previewItemController aspect_hookSelector:_performCustomCommitSelector withOptions:AspectPositionAfter usingBlock:^() {

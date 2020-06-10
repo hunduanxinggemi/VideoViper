@@ -17,6 +17,13 @@
     model.url = url;
     return model;
 }
++ (id)hrjsonToModel:(NSDictionary *)dic{
+    MMovieModel *model = [[MMovieModel alloc] init];
+    model.title = [dic valueForKey:@"name"];
+    model.url = [dic valueForKey:@"url"];
+    return model;
+}
+
 
 
 @end

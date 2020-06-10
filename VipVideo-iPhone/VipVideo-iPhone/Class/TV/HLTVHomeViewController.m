@@ -9,6 +9,7 @@
 #import "HLTVHomeViewController.h"
 #import "HLTVListViewController.h"
 
+
 #define FileNamePre         @"LiveList"
 #define TVHostURL           @"https://iodefog.github.io/text/"
 #define VideosTVListName    @"VideosTVListName.txt"
@@ -26,29 +27,9 @@
     
     self.title = @"电台直播";
     
-    [self operationStr];
     [self requestNetWorkData];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"HomeTableViewCell"];
-}
-
-- (void)operationStr{
-    [self.dataSource addObject:@{@"title":@"已测试可播放列表",
-                                 @"filePath":[HLTVListViewController getResultDocumentFilePath]}];
-    
-    for (NSInteger count = 1 ; count < NSIntegerMax; count ++) {
-        
-        NSString *fileName = [NSString stringWithFormat:@"%@%@",FileNamePre,@(count)];
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"txt"];
-        
-        if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-            [self.dataSource addObject:@{@"title":fileName,
-                                         @"filePath":filePath}];
-        }else {
-            NSLog(@"%@.txt不存在", fileName);
-            break;
-        }
-    }
 }
 
 - (void)requestNetWorkData{

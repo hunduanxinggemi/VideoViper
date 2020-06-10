@@ -8,12 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		088C7960D08CBD6A7BFBE2BD /* libPods-VipVideo-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */; };
-		4348C7AC2477D1A900F93954 /* vlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 4348C7AB2477D1A800F93954 /* vlist.json */; };
+		433D8550248F670100EEB3DA /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 433D8543248F670100EEB3DA /* NSString+PinYin4Cocoa.m */; };
+		433D8551248F670100EEB3DA /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 433D8544248F670100EEB3DA /* unicode_to_hanyu_pinyin.txt */; };
+		433D8552248F670100EEB3DA /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 433D8548248F670100EEB3DA /* PinyinHelper.m */; };
+		433D8553248F670100EEB3DA /* ChineseInclude.m in Sources */ = {isa = PBXBuildFile; fileRef = 433D854A248F670100EEB3DA /* ChineseInclude.m */; };
+		433D8554248F670100EEB3DA /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 433D854B248F670100EEB3DA /* HanyuPinyinOutputFormat.m */; };
+		433D8555248F670100EEB3DA /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 433D854C248F670100EEB3DA /* ChineseToPinyinResource.m */; };
+		433D8556248F670100EEB3DA /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 433D854D248F670100EEB3DA /* PinyinFormatter.m */; };
+		433D8557248F670100EEB3DA /* PinYinForObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 433D854E248F670100EEB3DA /* PinYinForObjc.m */; };
+		433D8558248F670100EEB3DA /* SearchTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 433D854F248F670100EEB3DA /* SearchTool.m */; };
+		433D855A248F700700EEB3DA /* video_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 433D8559248F700700EEB3DA /* video_normal@2x.png */; };
+		4344691524877FDA000FA605 /* vlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 4344691424877FDA000FA605 /* vlist.json */; };
+		435200C4248E40B7004E882C /* TVLiveList.json in Resources */ = {isa = PBXBuildFile; fileRef = 435200C3248E40B6004E882C /* TVLiveList.json */; };
+		4378FF432490C1C800D1EED5 /* ViP.json in Resources */ = {isa = PBXBuildFile; fileRef = 4378FF422490C1C800D1EED5 /* ViP.json */; };
 		4F3A3A26220339B500930A31 /* 电影天堂.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A1C220339B500930A31 /* 电影天堂.png */; };
 		4F3A3A27220339B500930A31 /* 芒果@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A1D220339B500930A31 /* 芒果@2x.png */; };
 		4F3A3A28220339B500930A31 /* 4084@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A1E220339B500930A31 /* 4084@2x.png */; };
 		4F3A3A29220339B500930A31 /* 爱奇艺@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A1F220339B500930A31 /* 爱奇艺@2x.png */; };
-		4F3A3A2A220339B500930A31 /* 视频@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A20220339B500930A31 /* 视频@2x.png */; };
 		4F3A3A2B220339B500930A31 /* 优酷@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A21220339B500930A31 /* 优酷@2x.png */; };
 		4F3A3A2C220339B500930A31 /* 乐视@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A22220339B500930A31 /* 乐视@2x.png */; };
 		4F3A3A2D220339B500930A31 /* 腾讯视频@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A23220339B500930A31 /* 腾讯视频@2x.png */; };
@@ -96,12 +107,31 @@
 /* Begin PBXFileReference section */
 		374B924D2BF783FA18A84027 /* Pods-VipVideo-iPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipVideo-iPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone.debug.xcconfig"; sourceTree = "<group>"; };
 		3FFBABEA1A43DE0B38ED6A63 /* Pods-VipVideo-iPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipVideo-iPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone.release.xcconfig"; sourceTree = "<group>"; };
-		4348C7AB2477D1A800F93954 /* vlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vlist.json; sourceTree = "<group>"; };
+		433D853E248F670100EEB3DA /* SearchTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTool.h; sourceTree = "<group>"; };
+		433D8540248F670100EEB3DA /* PinyinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinHelper.h; sourceTree = "<group>"; };
+		433D8541248F670100EEB3DA /* HanyuPinyinOutputFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanyuPinyinOutputFormat.h; sourceTree = "<group>"; };
+		433D8542248F670100EEB3DA /* ChineseInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseInclude.h; sourceTree = "<group>"; };
+		433D8543248F670100EEB3DA /* NSString+PinYin4Cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin4Cocoa.m"; sourceTree = "<group>"; };
+		433D8544248F670100EEB3DA /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
+		433D8545248F670100EEB3DA /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
+		433D8546248F670100EEB3DA /* PinYinForObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinYinForObjc.h; sourceTree = "<group>"; };
+		433D8547248F670100EEB3DA /* PinyinFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinFormatter.h; sourceTree = "<group>"; };
+		433D8548248F670100EEB3DA /* PinyinHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinHelper.m; sourceTree = "<group>"; };
+		433D8549248F670100EEB3DA /* NSString+PinYin4Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin4Cocoa.h"; sourceTree = "<group>"; };
+		433D854A248F670100EEB3DA /* ChineseInclude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseInclude.m; sourceTree = "<group>"; };
+		433D854B248F670100EEB3DA /* HanyuPinyinOutputFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HanyuPinyinOutputFormat.m; sourceTree = "<group>"; };
+		433D854C248F670100EEB3DA /* ChineseToPinyinResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyinResource.m; sourceTree = "<group>"; };
+		433D854D248F670100EEB3DA /* PinyinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinFormatter.m; sourceTree = "<group>"; };
+		433D854E248F670100EEB3DA /* PinYinForObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinYinForObjc.m; sourceTree = "<group>"; };
+		433D854F248F670100EEB3DA /* SearchTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTool.m; sourceTree = "<group>"; };
+		433D8559248F700700EEB3DA /* video_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_normal@2x.png"; sourceTree = "<group>"; };
+		4344691424877FDA000FA605 /* vlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vlist.json; sourceTree = "<group>"; };
+		435200C3248E40B6004E882C /* TVLiveList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TVLiveList.json; sourceTree = "<group>"; };
+		4378FF422490C1C800D1EED5 /* ViP.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ViP.json; sourceTree = "<group>"; };
 		4F3A3A1C220339B500930A31 /* 电影天堂.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "电影天堂.png"; sourceTree = "<group>"; };
 		4F3A3A1D220339B500930A31 /* 芒果@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "芒果@2x.png"; sourceTree = "<group>"; };
 		4F3A3A1E220339B500930A31 /* 4084@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4084@2x.png"; sourceTree = "<group>"; };
 		4F3A3A1F220339B500930A31 /* 爱奇艺@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "爱奇艺@2x.png"; sourceTree = "<group>"; };
-		4F3A3A20220339B500930A31 /* 视频@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "视频@2x.png"; sourceTree = "<group>"; };
 		4F3A3A21220339B500930A31 /* 优酷@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "优酷@2x.png"; sourceTree = "<group>"; };
 		4F3A3A22220339B500930A31 /* 乐视@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "乐视@2x.png"; sourceTree = "<group>"; };
 		4F3A3A23220339B500930A31 /* 腾讯视频@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "腾讯视频@2x.png"; sourceTree = "<group>"; };
@@ -210,14 +240,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		433D853D248F670100EEB3DA /* SearchTool */ = {
+			isa = PBXGroup;
+			children = (
+				433D853F248F670100EEB3DA /* Search */,
+				433D853E248F670100EEB3DA /* SearchTool.h */,
+				433D854F248F670100EEB3DA /* SearchTool.m */,
+			);
+			path = SearchTool;
+			sourceTree = "<group>";
+		};
+		433D853F248F670100EEB3DA /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				433D8540248F670100EEB3DA /* PinyinHelper.h */,
+				433D8541248F670100EEB3DA /* HanyuPinyinOutputFormat.h */,
+				433D8542248F670100EEB3DA /* ChineseInclude.h */,
+				433D8543248F670100EEB3DA /* NSString+PinYin4Cocoa.m */,
+				433D8544248F670100EEB3DA /* unicode_to_hanyu_pinyin.txt */,
+				433D8545248F670100EEB3DA /* ChineseToPinyinResource.h */,
+				433D8546248F670100EEB3DA /* PinYinForObjc.h */,
+				433D8547248F670100EEB3DA /* PinyinFormatter.h */,
+				433D8548248F670100EEB3DA /* PinyinHelper.m */,
+				433D8549248F670100EEB3DA /* NSString+PinYin4Cocoa.h */,
+				433D854A248F670100EEB3DA /* ChineseInclude.m */,
+				433D854B248F670100EEB3DA /* HanyuPinyinOutputFormat.m */,
+				433D854C248F670100EEB3DA /* ChineseToPinyinResource.m */,
+				433D854D248F670100EEB3DA /* PinyinFormatter.m */,
+				433D854E248F670100EEB3DA /* PinYinForObjc.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		4F3A3A1B220339B500930A31 /* viplist */ = {
 			isa = PBXGroup;
 			children = (
+				433D8559248F700700EEB3DA /* video_normal@2x.png */,
 				4F3A3A1C220339B500930A31 /* 电影天堂.png */,
 				4F3A3A1D220339B500930A31 /* 芒果@2x.png */,
 				4F3A3A1E220339B500930A31 /* 4084@2x.png */,
 				4F3A3A1F220339B500930A31 /* 爱奇艺@2x.png */,
-				4F3A3A20220339B500930A31 /* 视频@2x.png */,
 				4F3A3A21220339B500930A31 /* 优酷@2x.png */,
 				4F3A3A22220339B500930A31 /* 乐视@2x.png */,
 				4F3A3A23220339B500930A31 /* 腾讯视频@2x.png */,
@@ -281,13 +343,15 @@
 		C70B57B62112ACA50024D60B /* Support File */ = {
 			isa = PBXGroup;
 			children = (
+				4378FF422490C1C800D1EED5 /* ViP.json */,
+				435200C3248E40B6004E882C /* TVLiveList.json */,
 				C72EE48C214F5D0900288C1C /* PrefixHeader.pch */,
 				C7240A9A1FA174D3000684F1 /* Main.storyboard */,
 				C7240A9D1FA174D3000684F1 /* Assets.xcassets */,
 				C7240A9F1FA174D3000684F1 /* LaunchScreen.storyboard */,
 				C7240AA21FA174D3000684F1 /* Info.plist */,
 				C7240AA31FA174D3000684F1 /* main.m */,
-				4348C7AB2477D1A800F93954 /* vlist.json */,
+				4344691424877FDA000FA605 /* vlist.json */,
 			);
 			path = "Support File";
 			sourceTree = "<group>";
@@ -358,6 +422,7 @@
 		C72EE44C214F51ED00288C1C /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				433D853D248F670100EEB3DA /* SearchTool */,
 				C72EE481214F520200288C1C /* Mine */,
 				C72EE44D214F51ED00288C1C /* Home */,
 				C72EE450214F51ED00288C1C /* WMPlayer */,
@@ -553,19 +618,22 @@
 				4F3A3A26220339B500930A31 /* 电影天堂.png in Resources */,
 				4F3A3A2E220339B500930A31 /* 52@2x.png in Resources */,
 				4F3A3A27220339B500930A31 /* 芒果@2x.png in Resources */,
+				433D8551248F670100EEB3DA /* unicode_to_hanyu_pinyin.txt in Resources */,
 				4F62A60021EB761C0044C07D /* empty_placeholder@2x.png in Resources */,
 				4F3A3A2C220339B500930A31 /* 乐视@2x.png in Resources */,
 				4F3A3A28220339B500930A31 /* 4084@2x.png in Resources */,
 				C72EE445214F460B00288C1C /* live@2x.png in Resources */,
 				4FB74BAC21CE868A00F52070 /* README.md in Resources */,
+				4378FF432490C1C800D1EED5 /* ViP.json in Resources */,
 				C72EE489214F588D00288C1C /* download@2x.png in Resources */,
-				4F3A3A2A220339B500930A31 /* 视频@2x.png in Resources */,
+				435200C4248E40B7004E882C /* TVLiveList.json in Resources */,
+				4344691524877FDA000FA605 /* vlist.json in Resources */,
 				4F3A3A29220339B500930A31 /* 爱奇艺@2x.png in Resources */,
 				4F3A3A2B220339B500930A31 /* 优酷@2x.png in Resources */,
 				C72EE444214F460B00288C1C /* home@2x.png in Resources */,
-				4348C7AC2477D1A900F93954 /* vlist.json in Resources */,
 				C72EE474214F51ED00288C1C /* WMPlayer.bundle in Resources */,
 				C72EE44B214F51BD00288C1C /* mine@2x.png in Resources */,
+				433D855A248F700700EEB3DA /* video_normal@2x.png in Resources */,
 				4F3A3A2D220339B500930A31 /* 腾讯视频@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,11 +688,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C70B57AA2112AC200024D60B /* NSURLProtocol+UIWebVIew.m in Sources */,
+				433D8554248F670100EEB3DA /* HanyuPinyinOutputFormat.m in Sources */,
 				C72EE47C214F51ED00288C1C /* AppDelegate+Download.m in Sources */,
 				C72EE47B214F51ED00288C1C /* DownLoadCell.m in Sources */,
 				C72EE47A214F51ED00288C1C /* FinishedViewController.m in Sources */,
+				433D8552248F670100EEB3DA /* PinyinHelper.m in Sources */,
 				4FB74BAA21CE85AC00F52070 /* UIButton+Addition.m in Sources */,
 				C72EE478214F51ED00288C1C /* QSPDownloadTool.m in Sources */,
+				433D8557248F670100EEB3DA /* PinYinForObjc.m in Sources */,
 				C70B57A72112AC200024D60B /* VipURLManager.m in Sources */,
 				C72EE47F214F51ED00288C1C /* MMovieModel.m in Sources */,
 				C70B57A92112AC200024D60B /* NSURLProtocol+WKWebVIew.m in Sources */,
@@ -636,14 +707,19 @@
 				C72EE473214F51ED00288C1C /* WMPlayerModel.m in Sources */,
 				C70B57A62112AC200024D60B /* JSONKit.m in Sources */,
 				C70B57A82112AC200024D60B /* HybridNSURLProtocol.m in Sources */,
+				433D8556248F670100EEB3DA /* PinyinFormatter.m in Sources */,
+				433D8553248F670100EEB3DA /* ChineseInclude.m in Sources */,
 				C72EE479214F51ED00288C1C /* DownloadViewController.m in Sources */,
+				433D8555248F670100EEB3DA /* ChineseToPinyinResource.m in Sources */,
 				C72EE47E214F51ED00288C1C /* HLTVListViewController.m in Sources */,
 				C72EE476214F51ED00288C1C /* FastForwardView.m in Sources */,
 				C72EE477214F51ED00288C1C /* WMPlayer.m in Sources */,
 				4FD3887121E991E100D1A3C0 /* HLHomeViewController.m in Sources */,
 				C7240A961FA174D3000684F1 /* AppDelegate.m in Sources */,
 				C72EE487214F530000288C1C /* HLMineViewController.m in Sources */,
+				433D8558248F670100EEB3DA /* SearchTool.m in Sources */,
 				4F52603C220309CE0028DB62 /* BHBNetworkSpeed.m in Sources */,
+				433D8550248F670100EEB3DA /* NSString+PinYin4Cocoa.m in Sources */,
 				C70EBD2C2016D4C500413F85 /* HLPlayerViewController.m in Sources */,
 				4FA2AA9E20E27B9E0010144F /* HLTabBarController.m in Sources */,
 			);

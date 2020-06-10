@@ -15,7 +15,7 @@
 #import "HLPlayerViewController.h"
 #import "MMovieModel.h"
 #import "Masonry.h"
-
+#import "SearchTool.h"
 #define CanPlayResult   @"CanPlayResult"
 
 @interface HLTVListViewController () <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
@@ -68,7 +68,6 @@
     [self addBackgroundMethod];
     [self requestNetWorkData];
     [self registerObserver];
-//    [self setNavgationRightItem];
     [self addMasonry];
 }
 
@@ -123,153 +122,6 @@
     AVAudioSession *session = [AVAudioSession sharedInstance];
     [session setActive:YES error:nil];
     [session setCategory:AVAudioSessionCategoryPlayback error:nil];
-}
-
-/**
- *  处理文件，如果是本地文件，读取文件字符串，转换
-    如果是网络文件，则下载文件。然后转换。
- */
-- (void)operationStr{
-    NSString *filePath = self.dict[@"filePath"];
-    __block NSError *error = nil;
-    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-        // 去除路径下的某个txt文件
-        NSString *videosText = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
-        [self transformVideoUrlFromString:videosText error:error];
-        [self.liveListTableView reloadData];
-    }
-    // 网络请求文件
-    else if([filePath hasPrefix:@"http"]){
-        
-        NSString *result = nil;
-        if (filePath) {
-           result =  [[NSUserDefaults standardUserDefaults] objectForKey:filePath];
-        }
-        [self transformVideoUrlFromString:result error:error];
-        
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            NSString *videosText = [NSString stringWithContentsOfURL:[NSURL URLWithString:filePath] encoding:NSUTF8StringEncoding error:&error];
-            [self transformVideoUrlFromString:videosText error:error];
-            if (filePath && videosText) {
-                [[NSUserDefaults standardUserDefaults] setObject:videosText forKey:filePath];
-            }
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.liveListTableView reloadData];
-            });
-        });
-    }
-}
-
-/**
- *  转换字符串变成视频url+name
- *
- *  @param videosText 视频播放的url
- *  @param error      是否有错误
- */
-- (void)transformVideoUrlFromString:(NSString *)videosText error:(NSError *)error
-{
-    [self.originalSource removeAllObjects];
-    [self.dataSource removeAllObjects];
-    
-    // 过滤掉特殊字符 "\r"。有些url带有"\r",导致转换失败
-    videosText = [videosText stringByReplacingOccurrencesOfString:@"\r" withString:@""];
-    if (!error && (videosText.length > 0)) {
-        NSMutableArray *itemArray = [NSMutableArray array];
-        // 依据换行符截取一行字符串
-        NSArray *videosArray = [videosText componentsSeparatedByString:@"\n"];
-        
-        for (NSString *subStr in videosArray) {
-            // 根据"," 和" " 分割一行的字符串
-            NSArray *subStrArray = [subStr componentsSeparatedByString:@","];
-            NSArray *sub2StrArray = [subStr componentsSeparatedByString:@" "];
-            
-            if(subStrArray.count == 2 || (sub2StrArray.count == 2)){
-                NSArray *tempArray = (subStrArray.count == 2)? subStrArray : sub2StrArray;
-                itemArray = [self checkMultipleUrlInOneUrlWithUrl:[tempArray lastObject] videoName:[tempArray firstObject] itemArray:itemArray];
-            }
-            else if ([subStr stringByReplacingOccurrencesOfString:@" " withString:@""].length == 0){
-                // nothing
-            }
-            else if (subStrArray.count >= 3 || (sub2StrArray.count >= 3)){
-                NSArray *tempArray = (subStrArray.count >= 3)? subStrArray : sub2StrArray;
-                NSString *tempUrl = [tempArray objectAtIndex:1];
-                itemArray = [self checkMultipleUrlInOneUrlWithUrl:tempUrl.length>5?tempUrl:[tempArray objectAtIndex:2] videoName:[tempArray firstObject] itemArray:itemArray];
-            }
-            else {
-                subStrArray = [subStr componentsSeparatedByString:@" "];
-                itemArray = [self checkMultipleUrlInOneUrlWithUrl:[subStrArray lastObject] videoName:[subStrArray firstObject] itemArray:itemArray];
-            }
-        }
-        [self.originalSource addObjectsFromArray:itemArray];
-        [self.dataSource addObjectsFromArray:itemArray];
-    }else {
-        NSLog(@"error %@", error);
-    }
-}
-
-- (NSMutableArray *)checkMultipleUrlInOneUrlWithUrl:(NSString *)url
-                              videoName:(NSString *)videoName
-                              itemArray:(NSMutableArray *)itemArray
-{
-    NSArray *multipleArray = [url componentsSeparatedByString:@"#"];
-    for (NSString *itemUrl in multipleArray) {
-      MMovieModel *model = [MMovieModel getMovieModelWithTitle:videoName ?: @"" url:itemUrl ?: @""];
-        [itemArray addObject:model];
-      /*
-        if (![self isContainObject:itemUrl] && itemUrl && videoName) {
-            [self writeNotRepeatURL:itemUrl name:videoName fileName:@"NotRepeat"];
-        }
-        else {
-            [self writeNotRepeatURL:itemUrl name:videoName fileName:@"Repeat"];
-        }
-       */
-    }
-    return itemArray;
-}
-    
-/**
- *  检查是否有重复url
- *
- *  @param url url description
- *
- *  @return 重复 YES， 不重复返回NO
- */
-- (BOOL)isContainObject:(NSString *)url{
-    NSString *document = [NSString stringWithFormat:@"%@/Documents/urlsSet.plist",NSHomeDirectory()];
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:document]) {
-        [[NSFileManager defaultManager] createFileAtPath:document contents:nil attributes:nil];
-    }
-    
-    NSMutableArray *urlArray = [NSMutableArray arrayWithContentsOfFile:document];
-    BOOL contain = [urlArray containsObject:url];
-    [urlArray addObject:url];
-    NSSet *urlSet = [NSSet setWithArray:urlArray];
-    urlArray = (id)[urlSet allObjects];
-    [urlArray writeToFile:document atomically:YES];
-    return contain;
-}
-
-/**
- *  把重复的保存在一起，不重复的保存在一起
- *
- *  @param url      url description
- *  @param name     TV name
- *  @param fileName 保存文件名
- */
-- (void)writeNotRepeatURL:(NSString *)url name:(NSString *)name fileName:(NSString *)fileName{
-    NSString *document = [NSString stringWithFormat:@"%@/Documents/%@.txt",NSHomeDirectory(), fileName];
-    if (![[NSFileManager defaultManager] fileExistsAtPath:document]) {
-        [[NSFileManager defaultManager] createFileAtPath:document contents:nil attributes:nil];
-    }
-    NSLog(@"Home ==== %@", document);
-    
-    NSError *error = nil;
-    NSString *NotRepeat = [NSString stringWithContentsOfFile:document encoding:NSUTF8StringEncoding error:&error];
-   NotRepeat = [NotRepeat stringByAppendingFormat:@"%@,%@\n",name, url];
-    NSLog(@"读取字符串 error %@", error);
-    [NotRepeat writeToFile:document atomically:YES encoding:NSUTF8StringEncoding error:&error];
-    NSLog(@"写入 error %@", error);
 }
     
 /**
@@ -459,55 +311,6 @@
     [vc tableView:self.liveListTableView didSelectRowAtIndexPath:indexPath];
 }
 
-/**
- *  根据一个列表产生一个可播放地址列表
- *
- *  @param movieUrl 播放地址
- */
-- (void)saveCanPlayHistory:(NSString *)movieUrl{
-    NSMutableDictionary *canPlaylistDict = [NSMutableDictionary dictionary];
-    [canPlaylistDict setDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:self.dict[@"title"]]];
-    [canPlaylistDict setValue:movieUrl forKey:movieUrl];
-    // 保存到 NSUserDefaults
-    [[NSUserDefaults standardUserDefaults] setObject:canPlaylistDict forKey:self.dict[@"title"]];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
-
-/**
- *  保存可以播放的地址进入沙盒
- *
- *  @param movieUrl 播放地址
- *  @param name     播放地址名称
- */
-- (void)saveCanPlayHistoryToDocument:(NSString *)movieUrl name:(NSString *)name{
-    NSString *documentPath = [HLTVListViewController getResultDocumentFilePath];
-    NSError *error = nil;
-    NSString *oldString = [NSString stringWithContentsOfFile:documentPath encoding:NSUTF8StringEncoding error:&error];
-    if (!error) {
-        NSLog(@"读取字符串 error %@", error);
-    }
-    NSString *newString = [NSString stringWithFormat:@"%@\n%@ %@",oldString?:@"", name, movieUrl];
-    BOOL success = [newString writeToFile:documentPath atomically:YES encoding:NSUTF8StringEncoding error:&error];
-    if (!error || !success) {
-        NSLog(@"写入字符串 error %@， success %d", error, success);
-    }
-}
-
-/**
- *  获取过滤后的列表存储地址
- *
- *  @return 沙盒存储地址
- */
-+ (NSString *)getResultDocumentFilePath{
-    NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    documentPath = [NSString stringWithFormat:@"%@/%@.txt", documentPath, CanPlayResult];
-    if (![[NSFileManager defaultManager] fileExistsAtPath:documentPath]) {
-        [[NSFileManager defaultManager] createFileAtPath:documentPath contents:nil attributes:nil];
-    }
-    NSLog(@"documentPath  %@", documentPath);
-    return documentPath;
-}
-
 
 #pragma mark - SearchBar delegate
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
@@ -532,68 +335,36 @@
     }
 }
 
+#pragma Mark 模糊搜索
 - (void)filterDataSourceWithKey:(NSString *)searchKey finish:(BOOL)finish{
+    NSArray * resultArr = [SearchTool searchWithOriginalArray:self.originalSource andSearchText:searchKey andSearchByPropertyName:@"title"];
+    self.dataSource = [NSMutableArray arrayWithArray:resultArr];
+    [self.liveListTableView reloadData];
+ 
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title CONTAINS %@", searchKey];
-    NSArray *persons = [self.originalSource filteredArrayUsingPredicate:predicate];
-    NSLog(@"************ \n%@", persons);
-    
-    
-    if (persons.count) {
-        [self.dataSource removeAllObjects];
-        [self.dataSource addObjectsFromArray:persons];
-        [self.liveListTableView reloadData];
-    }else if(!finish && persons.count==0){
-        [self.dataSource removeAllObjects];
-        [self.liveListTableView reloadData];
-    }
-    else {
-        [[[UIAlertView alloc] initWithTitle:nil message:@"筛选无结果" delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:Nil, nil] show];
-    }
 }
 
-#pragma mark -
+#define FileNamePre         @"TVLiveList"
 
-#define FileNamePre         @"LiveList"
-#define TVHostURL           @"https://iodefog.github.io/text/"
-#define VideosTVListName    @"VideosTVListName.txt"
 
 - (void)requestNetWorkData{
     
-    NSString *videosTVListNameUrl = [NSString stringWithFormat:@"%@%@", TVHostURL,VideosTVListName];
-    
-    __block NSError *error = nil;
-    
-    NSString *result = nil;
-    if (videosTVListNameUrl) {
-        result =  [[NSUserDefaults standardUserDefaults] objectForKey:videosTVListNameUrl];
-    }
-    [self transformRootVideoUrlFromString:result error:error];
-    
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        NSString *videoList = [NSString stringWithContentsOfURL:[NSURL URLWithString:videosTVListNameUrl] encoding:NSUTF8StringEncoding error:&error];
-        error ? NSLog(@"%@", error) : nil;
-        [self transformRootVideoUrlFromString:videoList error:error];
+   NSError *error = nil;
+      NSString *path = [[NSBundle mainBundle] pathForResource:FileNamePre ofType:@"json"];
+      if (!path) {
+          return;
+      }
+      NSData *data = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:&error];
+    self.dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    NSArray * movieArr = [self.dict valueForKey:@"TVLive"];
+    for (NSDictionary * dic in movieArr) {
         
-        if (videosTVListNameUrl && videoList) {
-            [[NSUserDefaults standardUserDefaults] setObject:videoList forKey:videosTVListNameUrl];
-        }
-    });
+        [self.dataSource addObject:[MMovieModel hrjsonToModel:dic]] ;
+    }
+    self.originalSource = self.dataSource;
+    [self.liveListTableView reloadData];
 }
 
-- (void)transformRootVideoUrlFromString:(NSString *)videoList error:(NSError *)error
-{
-    [self.dataSource removeAllObjects];
-    NSArray *titleArray = [videoList componentsSeparatedByString:@"\n"];
-    for (NSString *title in titleArray) {
-        [self.dataSource addObject:@{@"title":title,
-                                     @"filePath":[NSString stringWithFormat:@"%@%@", TVHostURL, title]}];
-    }
-    
-    NSDictionary *firstDict = [self.dataSource firstObject];
-    self.dict = firstDict;
-    
-    [self operationStr];
-}
+
 
 @end

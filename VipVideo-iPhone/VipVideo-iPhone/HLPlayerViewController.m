@@ -158,7 +158,7 @@
         [alertController addAction:action];
         [self presentViewController:alertController animated:YES completion:nil];
     }
-}
+} 
 
 - (void)downloadToolDidFinish:(QSPDownloadTool *)tool downloadSource:(QSPDownloadSource *)source{
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"下载成功" message:nil preferredStyle:UIAlertControllerStyleAlert];

@@ -61,7 +61,7 @@
     self.titleLabel.text = object.title;
     self.iconImageView.image = [UIImage imageNamed:object.icon];
     if (!self.iconImageView.image) {
-        self.iconImageView.image = [UIImage imageNamed:@"视频"];
+        self.iconImageView.image = [UIImage imageNamed:@"video_normal"];
     } else {
         self.iconImageView.backgroundColor = [UIColor clearColor];
     }
@@ -132,6 +132,9 @@
 
     HLWebVideoViewController *videoVC = [[HLWebVideoViewController alloc] init];
     videoVC.urlItem = object;
+    NSString * tapUrl  = videoVC.urlItem.url;
+    [[NSUserDefaults standardUserDefaults] setValue:tapUrl forKey:HLTapUrl];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     UINavigationController *videoNav = [[UINavigationController alloc] initWithRootViewController:videoVC];
     videoNav.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:videoNav animated:YES completion:nil];

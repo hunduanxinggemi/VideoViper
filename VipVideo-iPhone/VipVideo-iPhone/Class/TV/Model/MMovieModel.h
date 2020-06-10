@@ -18,4 +18,7 @@
 + (id)getMovieModelWithTitle:(NSString *)title
                          url:(NSString *)url;
 
++ (id)hrjsonToModel:(NSDictionary *)dic;
+
+
 @end
