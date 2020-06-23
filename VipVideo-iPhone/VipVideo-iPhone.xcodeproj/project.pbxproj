@@ -20,6 +20,8 @@
 		433D855A248F700700EEB3DA /* video_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 433D8559248F700700EEB3DA /* video_normal@2x.png */; };
 		4344691524877FDA000FA605 /* vlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 4344691424877FDA000FA605 /* vlist.json */; };
 		435200C4248E40B7004E882C /* TVLiveList.json in Resources */ = {isa = PBXBuildFile; fileRef = 435200C3248E40B6004E882C /* TVLiveList.json */; };
+		435FC2A624A1929B00204DA2 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 435FC2A524A1929B00204DA2 /* UIView+Frame.m */; };
+		435FC2A924A192C000204DA2 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 435FC2A824A192C000204DA2 /* LoginView.m */; };
 		4378FF432490C1C800D1EED5 /* ViP.json in Resources */ = {isa = PBXBuildFile; fileRef = 4378FF422490C1C800D1EED5 /* ViP.json */; };
 		4F3A3A26220339B500930A31 /* 电影天堂.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A1C220339B500930A31 /* 电影天堂.png */; };
 		4F3A3A27220339B500930A31 /* 芒果@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A1D220339B500930A31 /* 芒果@2x.png */; };
@@ -127,6 +129,10 @@
 		433D8559248F700700EEB3DA /* video_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_normal@2x.png"; sourceTree = "<group>"; };
 		4344691424877FDA000FA605 /* vlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vlist.json; sourceTree = "<group>"; };
 		435200C3248E40B6004E882C /* TVLiveList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TVLiveList.json; sourceTree = "<group>"; };
+		435FC2A424A1929B00204DA2 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		435FC2A524A1929B00204DA2 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		435FC2A724A192C000204DA2 /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		435FC2A824A192C000204DA2 /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
 		4378FF422490C1C800D1EED5 /* ViP.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ViP.json; sourceTree = "<group>"; };
 		4F3A3A1C220339B500930A31 /* 电影天堂.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "电影天堂.png"; sourceTree = "<group>"; };
 		4F3A3A1D220339B500930A31 /* 芒果@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "芒果@2x.png"; sourceTree = "<group>"; };
@@ -385,6 +391,8 @@
 				C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */,
 				4FA2AA9C20E27B9E0010144F /* HLTabBarController.h */,
 				4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */,
+				435FC2A424A1929B00204DA2 /* UIView+Frame.h */,
+				435FC2A524A1929B00204DA2 /* UIView+Frame.m */,
 				4F526038220309CE0028DB62 /* Addtations */,
 				C72EE44C214F51ED00288C1C /* Class */,
 				C70B579A2112AC200024D60B /* Data */,
@@ -528,6 +536,8 @@
 			children = (
 				C72EE485214F530000288C1C /* HLMineViewController.h */,
 				C72EE486214F530000288C1C /* HLMineViewController.m */,
+				435FC2A724A192C000204DA2 /* LoginView.h */,
+				435FC2A824A192C000204DA2 /* LoginView.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -693,12 +703,14 @@
 				C72EE47B214F51ED00288C1C /* DownLoadCell.m in Sources */,
 				C72EE47A214F51ED00288C1C /* FinishedViewController.m in Sources */,
 				433D8552248F670100EEB3DA /* PinyinHelper.m in Sources */,
+				435FC2A924A192C000204DA2 /* LoginView.m in Sources */,
 				4FB74BAA21CE85AC00F52070 /* UIButton+Addition.m in Sources */,
 				C72EE478214F51ED00288C1C /* QSPDownloadTool.m in Sources */,
 				433D8557248F670100EEB3DA /* PinYinForObjc.m in Sources */,
 				C70B57A72112AC200024D60B /* VipURLManager.m in Sources */,
 				C72EE47F214F51ED00288C1C /* MMovieModel.m in Sources */,
 				C70B57A92112AC200024D60B /* NSURLProtocol+WKWebVIew.m in Sources */,
+				435FC2A624A1929B00204DA2 /* UIView+Frame.m in Sources */,
 				C72EE475214F51ED00288C1C /* WMLightView.m in Sources */,
 				C72EE472214F51ED00288C1C /* HLWebVideoViewController.m in Sources */,
 				C72EE47D214F51ED00288C1C /* HLTVHomeViewController.m in Sources */,

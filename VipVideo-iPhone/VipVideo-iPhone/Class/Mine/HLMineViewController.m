@@ -8,6 +8,7 @@
 
 #import "HLMineViewController.h"
 #import "Masonry.h"
+#import "LoginView.h"
 
 @interface HLMineViewController ()
 @property (weak, nonatomic) IBOutlet UISwitch *uaSwitch;
@@ -23,29 +24,54 @@
     
     self.title = @"我的";
     
-    UILabel *uaLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    uaLabel.font = [UIFont systemFontOfSize:15];
-    uaLabel.textColor = [UIColor blackColor];
-    uaLabel.text = @"使用PC版UsarAgent";
-    [self.view addSubview:uaLabel];
+    if ([IsLogin isEqualToString:@"0"]) {
+        [self creatUserValidateUI];
+        return;
+    }
+    [self showLoginView];
     
-    UISwitch *uaSwitch = [[UISwitch alloc] initWithFrame:CGRectZero];
-    BOOL isOn = [[NSUserDefaults standardUserDefaults] boolForKey:HLVideoIphoneUAisOn];
-    uaSwitch.on = isOn;
-    [uaSwitch addTarget:self action:@selector(swichChange:) forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:uaSwitch];
+}
+-(void)creatUserValidateUI{
+
     
-    [uaLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(kNavgationBarHeight + 15);
-        make.left.equalTo(self.view).offset(15);
+    UILabel * titleLabel = [[UILabel alloc] init];
+    titleLabel.size = CGSizeMake(200, 100);
+    titleLabel.centerX = kScreenWidth/2.0;
+    titleLabel.y = 250;
+    titleLabel.font = [UIFont systemFontOfSize:16 weight:(UIFontWeightRegular)];
+    titleLabel.textColor = [UIColor blackColor];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.text = @"您的会员截止日期为2020-7-20到期，为了不影响您的使用，请及时续费哦！";
+    titleLabel.numberOfLines = 0;
+    [self.view addSubview:titleLabel];
+                                                                        
+}
+             
+-(void)loginAction:(UIButton *)btn{
+    
+    [LoginView showLoginViewActionCompleteBlcok:^{
+        NSLog(@"已经展示完了");
     }];
+
+}
+                                                            
+-(void)showLoginView{
     
-    [uaSwitch mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(uaLabel);
-        make.left.equalTo(uaLabel.mas_right).offset(20);
-        make.height.mas_equalTo(30);
-        make.width.mas_equalTo(50);
-    }];
+    
+    UIButton * loginBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    loginBtn.size = CGSizeMake(80, 45);
+    loginBtn.centerX = kScreenWidth/2.0;
+    loginBtn.y =  200;
+    [loginBtn setTitle:@"登 录" forState:(UIControlStateNormal)];
+    [loginBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+    loginBtn.titleLabel.font = [UIFont systemFontOfSize:18 weight:(UIFontWeightRegular)];
+    loginBtn.layer.cornerRadius = 15;
+    [loginBtn setClipsToBounds:YES];
+    [loginBtn addTarget:self action:@selector(loginAction:) forControlEvents:(UIControlEventTouchUpInside)];
+    loginBtn.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:loginBtn];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
