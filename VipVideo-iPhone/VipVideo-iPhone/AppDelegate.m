@@ -31,7 +31,7 @@
 
     [[NSUserDefaults standardUserDefaults] synchronize];
     
-    [Bugly startWithAppId:@"c436559ac2"];
+    [Bugly startWithAppId:@"51511e6dc5"];
     
     [VipURLManager sharedInstance];
     [[QSPDownloadTool shareInstance] startAllTask];
