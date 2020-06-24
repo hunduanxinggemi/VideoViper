@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		088C7960D08CBD6A7BFBE2BD /* libPods-VipVideo-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */; };
 		433D8550248F670100EEB3DA /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 433D8543248F670100EEB3DA /* NSString+PinYin4Cocoa.m */; };
 		433D8551248F670100EEB3DA /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 433D8544248F670100EEB3DA /* unicode_to_hanyu_pinyin.txt */; };
 		433D8552248F670100EEB3DA /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 433D8548248F670100EEB3DA /* PinyinHelper.m */; };
@@ -39,6 +38,7 @@
 		4FB74BAA21CE85AC00F52070 /* UIButton+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB74BA821CE85AC00F52070 /* UIButton+Addition.m */; };
 		4FB74BAC21CE868A00F52070 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4FB74BAB21CE868A00F52070 /* README.md */; };
 		4FD3887121E991E100D1A3C0 /* HLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD3887021E991E100D1A3C0 /* HLHomeViewController.m */; };
+		76DEAA7C9C5E1A2B61BBB23F /* Pods_VipVideo_iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58AF90FD77A4432F7B8B36CA /* Pods_VipVideo_iPhone.framework */; };
 		C70B57A62112AC200024D60B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579C2112AC200024D60B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C70B57A72112AC200024D60B /* VipURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579D2112AC200024D60B /* VipURLManager.m */; };
 		C70B57A82112AC200024D60B /* HybridNSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57A02112AC200024D60B /* HybridNSURLProtocol.m */; };
@@ -154,7 +154,7 @@
 		4FB74BAB21CE868A00F52070 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		4FD3886F21E991E100D1A3C0 /* HLHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLHomeViewController.h; sourceTree = "<group>"; };
 		4FD3887021E991E100D1A3C0 /* HLHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLHomeViewController.m; sourceTree = "<group>"; };
-		683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VipVideo-iPhone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58AF90FD77A4432F7B8B36CA /* Pods_VipVideo_iPhone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VipVideo_iPhone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70B579B2112AC200024D60B /* VipURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipURLManager.h; sourceTree = "<group>"; };
 		C70B579C2112AC200024D60B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		C70B579D2112AC200024D60B /* VipURLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VipURLManager.m; sourceTree = "<group>"; };
@@ -222,7 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C72675C720E08A2A00D1F92E /* HLDownload.framework in Frameworks */,
-				088C7960D08CBD6A7BFBE2BD /* libPods-VipVideo-iPhone.a in Frameworks */,
+				76DEAA7C9C5E1A2B61BBB23F /* Pods_VipVideo_iPhone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +241,7 @@
 		3B0076D6332F4C32AECFFA55 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */,
+				58AF90FD77A4432F7B8B36CA /* Pods_VipVideo_iPhone.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -553,8 +553,8 @@
 				C7240A8D1FA174D3000684F1 /* Sources */,
 				C7240A8E1FA174D3000684F1 /* Frameworks */,
 				C7240A8F1FA174D3000684F1 /* Resources */,
-				A69892C1BD1C8F0115A4039D /* [CP] Copy Pods Resources */,
 				C72675CB20E08A2A00D1F92E /* Embed Frameworks */,
+				966E3C715ED11ABED8788EDA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -669,25 +669,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A69892C1BD1C8F0115A4039D /* [CP] Copy Pods Resources */ = {
+		966E3C715ED11ABED8788EDA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VipVideo-iPhone/PodInputFileList.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VipVideo-iPhone/PodOutputFileList.xcfilelist",
-			);
-			outputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

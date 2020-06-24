@@ -1,0 +1,6 @@
+framework module HLAdditions {
+  umbrella header "HLAdditions-umbrella.h"
+
+  export *
+  module * { export * }
+}

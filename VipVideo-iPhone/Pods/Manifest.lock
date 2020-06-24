@@ -9,16 +9,16 @@ PODS:
     - AXNavigationBackItemInjection
     - AXPracticalHUD
     - NJKWebViewProgress
-  - Bugly (2.5.0)
-  - CocoaAsyncSocket (7.6.3)
+  - Bugly (2.5.4)
+  - CocoaAsyncSocket (7.6.4)
   - CocoaHTTPServer (2.3):
     - CocoaAsyncSocket
     - CocoaLumberjack
-  - CocoaLumberjack (3.5.0):
-    - CocoaLumberjack/Core (= 3.5.0)
-  - CocoaLumberjack/Core (3.5.0)
+  - CocoaLumberjack (3.6.1):
+    - CocoaLumberjack/Core (= 3.6.1)
+  - CocoaLumberjack/Core (3.6.1)
   - DZNEmptyDataSet (1.8.1)
-  - FTPopOverMenu (2.0.3)
+  - FTPopOverMenu (2.1.1)
   - HLAdditions (1.0.4)
   - Masonry (1.1.0)
   - NJKWebViewProgress (0.2.3):
@@ -26,6 +26,7 @@ PODS:
     - NJKWebViewProgress/ProgressView (= 0.2.3)
   - NJKWebViewProgress/Core (0.2.3)
   - NJKWebViewProgress/ProgressView (0.2.3)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - AXWebViewController
@@ -35,9 +36,10 @@ DEPENDENCIES:
   - FTPopOverMenu
   - HLAdditions
   - Masonry
+  - SVProgressHUD
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - Aspects
     - AXIndicatorView
     - AXNavigationBackItemInjection
@@ -52,6 +54,7 @@ SPEC REPOS:
     - HLAdditions
     - Masonry
     - NJKWebViewProgress
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
@@ -59,16 +62,17 @@ SPEC CHECKSUMS:
   AXNavigationBackItemInjection: efe0446967f3cbcc85a9118decd1e145138912dd
   AXPracticalHUD: 821d170b31e050c426ef8754b07b4264a8b1d861
   AXWebViewController: 96566c473fce2806f4da696132b31777f5404c9f
-  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
-  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  Bugly: 4edda9bb0e3017fd453612189069757195fa23ca
+  CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
   CocoaHTTPServer: 5624681fc3473d43b18202f635f9b3abb013b530
-  CocoaLumberjack: cffaa70a9336515228178e3669b71bd49d343850
+  CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  FTPopOverMenu: 8aa89de66e72b53db3e7eeab42243d393237768f
+  FTPopOverMenu: 202d46aea0656307fd463fac0340c9c8837158d2
   HLAdditions: 611544862c3c85a2c77f165b3e426391e1cbddf0
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 7aeb8007c6d13122d7fdc2e3cc6016bc23017ee8
+PODFILE CHECKSUM: 70900a453dae4edb7daca01d1cd63237a37961fd
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.3

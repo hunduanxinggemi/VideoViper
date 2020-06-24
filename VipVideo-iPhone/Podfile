@@ -1,20 +1,17 @@
 # Uncomment the next line to define a global platform for your project
-
-
-platform :ios, '8.0'
-source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
-
-inhibit_all_warnings!
+# platform :ios, '9.0'
 
 target 'VipVideo-iPhone' do
-
-pod 'AXWebViewController'
-pod 'HLAdditions'
-pod 'FTPopOverMenu'
-#pod 'TOWebViewController'
-pod 'DZNEmptyDataSet'
-pod 'Masonry'
-pod 'CocoaHTTPServer'
-pod 'Bugly'
-
+  source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'AXWebViewController'
+  pod 'HLAdditions'
+  pod 'FTPopOverMenu'
+  #pod 'TOWebViewController'
+  pod 'DZNEmptyDataSet'
+  pod 'Masonry'
+  pod 'CocoaHTTPServer'
+  pod 'Bugly'
+  pod 'SVProgressHUD'
 end
