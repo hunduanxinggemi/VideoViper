@@ -40,9 +40,18 @@
  */
 @property (nonatomic,copy)LoginActionBlock  loginBlock;
 
+@property (nonatomic,strong)UITapGestureRecognizer *  tap;
+
+/**
+ descriptionLabel
+ */
+@property (nonatomic,strong)UILabel *  descriptionLabel;
+
 @end
 
 @implementation LoginView
+
+static LoginView * loginView = nil;
 
 /**
  创建单利
@@ -51,26 +60,22 @@
  */
 + (instancetype)shareLoginView {
     
-    static LoginView * loginView = nil;
     static dispatch_once_t onceToken;
-    
     dispatch_once(&onceToken, ^{
-        
+          
         loginView = [[self alloc] init];
-        loginView.frame = [[UIScreen mainScreen] bounds];
     });
-    
+    loginView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
     return loginView;
 }
 
 +(void)showLoginViewActionCompleteBlcok:(LoginActionCompleteBlock)completeBlock{
     
-    LoginView * loginV = [LoginView shareLoginView];
-    [loginV initWithUI];
-    [loginV setUIFrame];
+    [[self shareLoginView] initWithUI];
+    [[self shareLoginView] setUIFrame];
     UIWindow * window = [[UIApplication sharedApplication] keyWindow];
-    [window addSubview:loginV];
-    [window bringSubviewToFront:loginV];
+    [window addSubview:[self shareLoginView]];
+    [window bringSubviewToFront:[self shareLoginView]];
     completeBlock();
 }
 
@@ -93,21 +98,51 @@
     [self.backView addSubview:self.nameField];
     [self.backView addSubview:self.pwdField];
     [self.backView addSubview:self.loginBtn];
+    [self.backView addSubview:self.descriptionLabel];
     [self.loginBtn addTarget:self action:@selector(loginAction:) forControlEvents:(UIControlEventTouchUpInside)];
+    self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+    [self.backView addGestureRecognizer:self.tap];
+}
+
+-(void)tapAction:(UITapGestureRecognizer *)tap{
     
+    if (self.nameField.isEditing) {
+        [self.nameField resignFirstResponder];
+    }
+    if (self.pwdField.isEditing) {
+        [self.pwdField resignFirstResponder];
+    }
 }
 
 -(void)loginAction:(UIButton *)loginBtn{
-    LoginView * loginV = [LoginView shareLoginView];
-    self.loginBlock(loginV.nameField.text, loginV.pwdField.text);
+    if (![self.nameField.text isEqual:self.pwdField.text]) {
+        
+        
+        return;
+    }
+    if ([self.nameField.text isEqualToString:@""] || [self.pwdField.text isEqualToString:@""]) {
+        
+        
+        return;
+    }
+    
+    
     [self dismiss];
 }
 
++(void)loginActionBlock:(LoginActionBlock)loginActionBlock
+{
+    loginActionBlock(@"17691112170000");
+}
+
 -(void)dismiss{
-      [self removeFromSuperview];
+    [self removeFromSuperview];
+    [self.tap removeTarget:self action:@selector(tapAction:)];
+
 }
 
 -(void)setUIFrame{
+    
     self.titleLabel.size    = CGSizeMake(150, 30);
     self.titleLabel.font    = [UIFont systemFontOfSize:29 weight:(UIFontWeightRegular)];
     self.titleLabel.centerX = kScreenWidth/2.0;
@@ -115,6 +150,20 @@
     self.centerX            = kScreenWidth /2.0;
     self.y                  = self.backView.sumHeight+20;
     
+    self.nameField.size     = CGSizeMake(kScreenWidth/3.0*2, 45);
+    self.nameField.y        = self.titleLabel.sumHeight+45;
+    self.nameField.backgroundColor = [UIColor cyanColor];
+    self.nameField.centerX = kScreenWidth/2.0;
+    
+    self.pwdField.size     = self.nameField.size;
+    self.pwdField.y        = self.nameField.sumHeight+15;
+    self.pwdField.backgroundColor = [UIColor cyanColor];
+    self.pwdField.centerX = self.nameField.centerX;
+    
+    self.loginBtn.size     = CGSizeMake(180, 45);
+    self.loginBtn.backgroundColor = [UIColor orangeColor];
+    self.loginBtn.y = self.pwdField.sumHeight+55;
+    self.loginBtn.centerX = self.nameField.centerX;
     
 }
 
@@ -129,8 +178,8 @@
 {
     if (!_backView)
     {
-        _backView                 = [[UIView alloc] initWithFrame:self.bounds];
-        _backView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.65];
+        _backView                 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.height)];
+        _backView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7];
     }
     return _backView;
 }
@@ -146,8 +195,8 @@
     {
         _titleLabel               = [[UILabel alloc] init];
         _titleLabel.textColor     = [UIColor orangeColor];
-        _titleLabel.font          = [UIFont systemFontOfSize:26 weight:(UIFontWeightBold)];
-        _titleLabel.text          = @"登 录";
+        _titleLabel.font          = [UIFont systemFontOfSize:30 weight:(UIFontWeightHeavy)];
+        _titleLabel.text          = @"用户信息";
         _titleLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _titleLabel;
@@ -164,7 +213,7 @@
     {
         _nameField             = [[UITextField alloc] init];
         _nameField.delegate    = self;
-        _nameField.placeholder = @"请输入用户手机号";
+        _nameField.placeholder = @"    请输入用户手机号";
         _nameField.textColor   = [UIColor blackColor];
         _nameField.font        = [UIFont systemFontOfSize:18 weight:(UIFontWeightHeavy)];
         _nameField.tintColor   = [UIColor orangeColor];
@@ -180,7 +229,7 @@
     {
         _pwdField             = [[UITextField alloc] init];
         _pwdField.delegate    = self;
-        _pwdField.placeholder = @"请输入用户密码";
+        _pwdField.placeholder = @"    请再次输入手机号";
         _pwdField.textColor   = [UIColor blackColor];
         _pwdField.font        = [UIFont systemFontOfSize:18 weight:(UIFontWeightHeavy)];
         _pwdField.tintColor   = [UIColor orangeColor];
@@ -202,7 +251,7 @@
     {
         _loginBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
         [_loginBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-        [_loginBtn setTitle:@"登 录" forState:(UIControlStateNormal)];
+        [_loginBtn setTitle:@"提 交" forState:(UIControlStateNormal)];
         _loginBtn.titleLabel.font = [UIFont systemFontOfSize:18 weight:(UIFontWeightHeavy)];
         _loginBtn.backgroundColor = [UIColor cyanColor];
         _loginBtn.layer.cornerRadius = 15;
@@ -211,7 +260,23 @@
     return _loginBtn;
 }
 
-
+/**
+ 懒加载布局
+ 所有的都可以改写
+ @return 布局
+ */
+-(UILabel *)descriptionLabel
+{
+    if (!_descriptionLabel)
+    {
+        _descriptionLabel = [[UILabel alloc] init];
+        _descriptionLabel.font = [UIFont systemFontOfSize:15 weight:(UIFontWeightThin)];
+        _descriptionLabel.textColor = [UIColor redColor];
+        _descriptionLabel.numberOfLines = 0;
+        _descriptionLabel.text = @"请慎重输入手机号，因为该号码是你vip唯一凭证的重要因素，并且已经提交后便不可再次修改。所以请确认无误后点击提交按钮";
+    }
+    return _descriptionLabel;
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

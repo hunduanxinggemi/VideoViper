@@ -53,13 +53,16 @@
         NSLog(@"已经展示完了");
     }];
 
+    [LoginView loginActionBlock:^(NSString * _Nonnull userPhone) {
+        NSLog(@"我的手机号是%@",userPhone);
+    }];
 }
                                                             
 -(void)showLoginView{
     
     
     UIButton * loginBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    loginBtn.size = CGSizeMake(80, 45);
+    loginBtn.size = CGSizeMake(160, 45);
     loginBtn.centerX = kScreenWidth/2.0;
     loginBtn.y =  200;
     [loginBtn setTitle:@"登 录" forState:(UIControlStateNormal)];
