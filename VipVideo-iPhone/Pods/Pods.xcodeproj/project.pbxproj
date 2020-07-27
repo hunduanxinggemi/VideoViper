@@ -87,10 +87,7 @@
 		415113F49D0BB13F7563F4004A8F1486 /* DDRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EE958B88277C275CC9D428EE67E1DD /* DDRange.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		41D153F0653B3F5B41D3D007532C357A /* HTTPAuthenticationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 26EAB6C263A52C5F1DF4738699C201F4 /* HTTPAuthenticationRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42B494066092137DDED12340B262D680 /* NJKWebViewProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5AC7E25A637C39496D7668638FA8FF /* NJKWebViewProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		434B2D1824CAE9C700C4F3F0 /* webNext@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 434B2D1624CAE9C700C4F3F0 /* webNext@2x.png */; };
-		434B2D1924CAE9C700C4F3F0 /* webBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 434B2D1724CAE9C700C4F3F0 /* webBack@2x.png */; };
 		43B203E1A3DA8F85D621B298A7A05ED3 /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D0B80D96E897C0642BD9ECFF954539 /* DDMultiFormatter.m */; };
-		43DBCE4924CAC41600086ACB /* download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DBCE4824CAC41600086ACB /* download@2x.png */; };
 		43F4145D7ACE80E2F22546A9ED2258EB /* DDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 4476B97DEB961C777DD91FD4B787B0B5 /* DDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4705E66D86ACBA7F0D57C27BD6BAD30C /* DDASLLogCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = C22ADA6E27269D65A289D8718A3D6676 /* DDASLLogCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4795E32093478C003B06E21808E45FA8 /* AXIndicatorView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D13817A3CD8DD37ADA020399681FA /* AXIndicatorView-dummy.m */; };
@@ -502,10 +499,7 @@
 		3FADDF057A6187E26B17D26B4D5BA66B /* DDASLLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogger.m; path = Sources/CocoaLumberjack/DDASLLogger.m; sourceTree = "<group>"; };
 		4240579E070B1425424A8E58CA56E8B2 /* NSDictionary+.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+.m"; path = "HLAdditions/NSDictionary+.m"; sourceTree = "<group>"; };
 		42C01BF29629E3B8E945E41A9DD2FDAE /* CocoaHTTPServer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaHTTPServer-dummy.m"; sourceTree = "<group>"; };
-		434B2D1624CAE9C700C4F3F0 /* webNext@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "webNext@2x.png"; sourceTree = "<group>"; };
-		434B2D1724CAE9C700C4F3F0 /* webBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "webBack@2x.png"; sourceTree = "<group>"; };
 		434DEEDD610A44620FA49197AA4982BB /* AXNavigationBackItemInjection-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AXNavigationBackItemInjection-umbrella.h"; sourceTree = "<group>"; };
-		43DBCE4824CAC41600086ACB /* download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download@2x.png"; sourceTree = "<group>"; };
 		4476B97DEB961C777DD91FD4B787B0B5 /* DDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Sources/CocoaLumberjack/include/DDLog.h; sourceTree = "<group>"; };
 		44D76D38E71C314F027AFEE5A11507A9 /* AXWebViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AXWebViewController.modulemap; sourceTree = "<group>"; };
 		475C10C5CDD99B95BC09C00F2409EF30 /* DDFileLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Sources/CocoaLumberjack/include/DDFileLogger.h; sourceTree = "<group>"; };
@@ -1095,9 +1089,6 @@
 		48C2CBD5B7C83366F1C673C41EB3E67F /* AXWebViewController */ = {
 			isa = PBXGroup;
 			children = (
-				43DBCE4824CAC41600086ACB /* download@2x.png */,
-				434B2D1724CAE9C700C4F3F0 /* webBack@2x.png */,
-				434B2D1624CAE9C700C4F3F0 /* webNext@2x.png */,
 				DA445C539D9B52189019D5DF2ED7EC86 /* AXSecurityPolicy.h */,
 				0C2F201C40E8287B72F32413339E1AAE /* AXSecurityPolicy.m */,
 				D7725246F137E9D6CD1BA2AFDCCFB538 /* AXWebViewController.h */,
@@ -2143,9 +2134,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				434B2D1824CAE9C700C4F3F0 /* webNext@2x.png in Resources */,
-				434B2D1924CAE9C700C4F3F0 /* webBack@2x.png in Resources */,
-				43DBCE4924CAC41600086ACB /* download@2x.png in Resources */,
 				A608754ED21BCA7EEC934436C3D306B1 /* AXWebViewController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
