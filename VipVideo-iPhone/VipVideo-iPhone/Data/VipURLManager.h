@@ -34,9 +34,12 @@
 
 @property (nonatomic, weak) id currentPlayer;
 
+@property (nonatomic, strong) NSArray * vipNameArray;
+@property (nonatomic, strong) NSArray * phoneArray;
+@property (nonatomic, strong) NSArray * validateArr;
+@property (nonatomic, strong) NSMutableArray * vipArray;
 
 + (instancetype)sharedInstance;
 - (void)changeVideoItem:(VipUrlItem *)item;
-
 
 @end

@@ -579,7 +579,6 @@ BOOL AX_WEB_VIEW_CONTROLLER_iOS10_0_AVAILABLE() { return AX_WEB_VIEW_CONTROLLER_
 - (WKWebView *)webView {
     if (_webView) return _webView;
     WKWebViewConfiguration *config = _configuration;
-    _webView.backgroundColor = [UIColor yellowColor];
     if (!config) {
         config = [[WKWebViewConfiguration alloc] init];
         config.preferences.minimumFontSize = 9.0;
@@ -613,6 +612,7 @@ BOOL AX_WEB_VIEW_CONTROLLER_iOS10_0_AVAILABLE() { return AX_WEB_VIEW_CONTROLLER_
     _webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:config];
     _webView.allowsBackForwardNavigationGestures = YES;
     _webView.backgroundColor = [UIColor clearColor];
+    _webView.scrollView.backgroundColor = [UIColor clearColor];
     // Set auto layout enabled.
     _webView.translatesAutoresizingMaskIntoConstraints = NO;
     if (_enabledWebViewUIDelegate) _webView.UIDelegate = self;
@@ -673,25 +673,17 @@ BOOL AX_WEB_VIEW_CONTROLLER_iOS10_0_AVAILABLE() { return AX_WEB_VIEW_CONTROLLER_
 
 - (UIBarButtonItem *)backBarButtonItem {
     if (_backBarButtonItem) return _backBarButtonItem;
-
-    _backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:
-                          [UIImage imageNamed:@"AXWebViewControllerBack" inBundle:self.resourceBundle compatibleWithTraitCollection:nil]
-                                                          style:UIBarButtonItemStylePlain
-                                                         target:self
-                                                         action:@selector(goBackClicked:)];
-    _backBarButtonItem.width = 18.0f;
+    _backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"上一页" style:(UIBarButtonItemStylePlain) target:self action:@selector(goBackClicked:)];
+    _backBarButtonItem.width = 21.0f;
+    _backBarButtonItem.image = [UIImage imageNamed:@"webNext@2x.png"];
     return _backBarButtonItem;
 }
 
 - (UIBarButtonItem *)forwardBarButtonItem {
     if (_forwardBarButtonItem) return _forwardBarButtonItem;
-    
-    _forwardBarButtonItem = [[UIBarButtonItem alloc] initWithImage:
-                             [UIImage imageNamed:@"AXWebViewControllerNext" inBundle:self.resourceBundle compatibleWithTraitCollection:nil]
-                                                             style:UIBarButtonItemStylePlain
-                                                            target:self
-                                                            action:@selector(goForwardClicked:)];
-    _forwardBarButtonItem.width = 18.0f;
+    _forwardBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"下一页" style:(UIBarButtonItemStylePlain) target:self action:@selector(goForwardClicked:)];
+    _forwardBarButtonItem.image = [UIImage imageNamed:@"webBack@2x.png"];
+    _forwardBarButtonItem.width = 21.0f;
     return _forwardBarButtonItem;
 }
 
@@ -1156,7 +1148,7 @@ BOOL AX_WEB_VIEW_CONTROLLER_iOS10_0_AVAILABLE() { return AX_WEB_VIEW_CONTROLLER_
         popover.barButtonItem = sender;
         popover.permittedArrowDirections = UIPopoverArrowDirectionAny;
     }
-    activityController.modalPresentationStyle = UIModalPresentationOverFullScreen;
+    
     [self presentViewController:activityController animated:YES completion:nil];
 }
 
@@ -1332,7 +1324,6 @@ BOOL AX_WEB_VIEW_CONTROLLER_iOS10_0_AVAILABLE() { return AX_WEB_VIEW_CONTROLLER_
                         [[AXPracticalHUD sharedHUD] hide:YES afterDelay:0.5 completion:NULL];
                     }
                 }];
-                productVC.modalPresentationStyle = UIModalPresentationOverFullScreen;
                 [self presentViewController:productVC animated:YES completion:NULL];
                 decisionHandler(WKNavigationActionPolicyCancel);
                 return;
@@ -1496,7 +1487,6 @@ BOOL AX_WEB_VIEW_CONTROLLER_iOS10_0_AVAILABLE() { return AX_WEB_VIEW_CONTROLLER_
                         [[AXPracticalHUD sharedHUD] hide:YES afterDelay:0.5 completion:NULL];
                     }
                 }];
-                productVC.UIModalPresentationStyle = UIModalPresentationOverFullScreen;
                 [self presentViewController:productVC animated:YES completion:NULL];
                 decisionHandler(WKNavigationActionPolicyCancel);
                 return;
@@ -1805,12 +1795,16 @@ BOOL AX_WEB_VIEW_CONTROLLER_iOS10_0_AVAILABLE() { return AX_WEB_VIEW_CONTROLLER_
 }
 
 - (void)updateToolbarItems {
-    self.backBarButtonItem.enabled = self.self.webView.canGoBack;
+    self.backBarButtonItem.enabled = self.webView.canGoBack;
     self.forwardBarButtonItem.enabled = self.self.webView.canGoForward;
     self.actionBarButtonItem.enabled = !self.self.webView.isLoading;
+    NSLog(@"backBarButtonBarItem = %d",self.webView.canGoBack);
+    
+    self.backBarButtonItem.tintColor = [UIColor systemPinkColor];
+    self.forwardBarButtonItem.tintColor = [UIColor orangeColor];
+    self.refreshBarButtonItem.tintColor = [UIColor cyanColor];
     
     UIBarButtonItem *refreshStopBarButtonItem = self.self.webView.isLoading ? self.stopBarButtonItem : self.refreshBarButtonItem;
-    
     UIBarButtonItem *fixedSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
@@ -1826,6 +1820,8 @@ BOOL AX_WEB_VIEW_CONTROLLER_iOS10_0_AVAILABLE() { return AX_WEB_VIEW_CONTROLLER_
         self.navigationController.toolbar.tintColor = self.navigationController.navigationBar.tintColor;
         self.navigationController.toolbar.barTintColor = self.navigationController.navigationBar.barTintColor;
         self.toolbarItems = items;
+        NSLog(@"我想知道back按钮 = %@ img = %@ ，forward按钮 = %@   img = %@",self.backBarButtonItem,self.backBarButtonItem.image,self.forwardBarButtonItem,self.forwardBarButtonItem.image);
+        
     }
 }
 
@@ -1855,6 +1851,7 @@ BOOL AX_WEB_VIEW_CONTROLLER_iOS10_0_AVAILABLE() { return AX_WEB_VIEW_CONTROLLER_
         [self.navigationItem setLeftBarButtonItems:nil animated:NO];
     }
 }
+
 #define iPhone4s   SCREEN_HEIGHT==480.00
 #define iPhone5_5s SCREEN_HEIGHT==568.00
 #define iPhone6_6s SCREEN_HEIGHT==667.00
@@ -1881,16 +1878,37 @@ BOOL AX_WEB_VIEW_CONTROLLER_iOS10_0_AVAILABLE() { return AX_WEB_VIEW_CONTROLLER_
     for (UIView *_view in _webView.scrollView.subviews) {
         if ([_view isKindOfClass:NSClassFromString(@"WKContentView")]) {
             id _previewItemController = object_getIvar(_view, class_getInstanceVariable([_view class], "_previewItemController"));
-            
             NSArray * urlArr = @[@"https://iqiyi.com/",
                                  @"https://v.qq.com/",
-                                 @"https://www.bilibili.com/"
-                                    ];
+                                 @"https://www.bilibili.com/",
+                                 @"http://www.52gaoqing.com",
+                                 @"https://www.mgtv.com/",
+                                 @"https://www.youku.com/",
+                                 @"https://tv.sohu.com/",
+                                 @"https://www.le.com/",
+                                 @"http://v.d9y.net/",
+                                 @"http://www.btbtdy.net/",
+                                 @"http://www.yy6080.cn",
+                                 @"http://www.yy3080.com/vod-type-id-1-pg-1.html/",
+                                 @"http://www.sjzvip.cn/index.html",
+                                 @"https://www.dadatu.co/",
+                                 @"https://music.sonimei.cn/",
+                                 @"http://www.071o.com",
+                                 @"https://www.weisfx.com",
+                                 @"https://www.meijutt.tv",
+                                 @"https://91mjw.com/all",
+                                 @"https://www.jjmeiju.com",
+                                 @"http://www.5nj.com/?m=vod-type-id-8.html",
+                                 
+                                ];
             NSString * currentUrl = [[NSUserDefaults standardUserDefaults] objectForKey:@"HLTapUrl"];
-            if ([urlArr containsObject:currentUrl]) {                            
+            if ([urlArr containsObject:currentUrl]) {
+                          
+                [UIView animateWithDuration:0.3 animations:^{
                 _view.frame = CGRectMake(0, NaviHeight, 0, 0);
+                }];
             }
-            
+                      
             Class _class = [_previewItemController class];
             SEL _performCustomCommitSelector = NSSelectorFromString(@"previewInteractionController:interactionProgress:forRevealAtLocation:inSourceView:containerView:");
             [_previewItemController aspect_hookSelector:_performCustomCommitSelector withOptions:AspectPositionAfter usingBlock:^() {

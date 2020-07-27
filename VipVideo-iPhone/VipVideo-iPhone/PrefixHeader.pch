@@ -17,8 +17,9 @@
 #define HLVideoIphoneUAisOn   @"HLVideoIphoneUAisOn"
 #define HLTapUrl              @"HLTapUrl"
 #define IsLogin               @"1"
-#define UserName              @"17691121700"
-
+#define LoginDate             @"LoginDate"
+#define MyPhone               @"MyPhone"
+#define VipLoadFinish         @"VipLoadFinish"
 
 #define kIsIphone ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
 #define kScreenHeight  [[UIScreen mainScreen] bounds].size.height
@@ -27,5 +28,7 @@
 
 #import "VipURLManager.h"
 #import "UIView+Frame.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+#import "LoginModel.h"
 
 #endif /* PrefixHeader_pch */

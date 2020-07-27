@@ -21,16 +21,6 @@
 @property (nonatomic,strong)UILabel *  titleLabel;
 
 /**
- userNameTextField
- */
-@property (nonatomic,strong)UITextField *  nameField;
-
-/**
- pwdField
- */
-@property (nonatomic,strong)UITextField *  pwdField;
-
-/**
  UIButton
  */
 @property (nonatomic,strong)UIButton *  loginBtn;
@@ -92,6 +82,13 @@ static LoginView * loginView = nil;
 
 }
 
++(void)clearUserPwd{
+    LoginView * loginV    = [self shareLoginView];
+    loginV.nameField.text = @"";
+    loginV.pwdField.text  = @"";
+    
+}
+
 -(void)initWithUI{
     [self addSubview:self.backView];
     [self.backView addSubview:self.titleLabel];
@@ -117,54 +114,52 @@ static LoginView * loginView = nil;
 -(void)loginAction:(UIButton *)loginBtn{
     if (![self.nameField.text isEqual:self.pwdField.text]) {
         
-        
+        [SVProgressHUD showErrorWithStatus:@"请确定两次输入一样！"];
         return;
     }
     if ([self.nameField.text isEqualToString:@""] || [self.pwdField.text isEqualToString:@""]) {
         
-        
+        [SVProgressHUD showErrorWithStatus:@"请输入手机号。"];
         return;
     }
-    
-    
+    self.commitBlock([self getUserPhone]);
     [self dismiss];
 }
 
-+(void)loginActionBlock:(LoginActionBlock)loginActionBlock
+-(NSString *)getUserPhone{
+    return [self.nameField.text isEqualToString:self.pwdField.text]?self.nameField.text:@"";
+}
+
++(void)commitActionBlock:(LoginActionBlock)commitActionBlock
 {
-    loginActionBlock(@"17691112170000");
+    loginView.commitBlock([loginView getUserPhone]);
 }
 
 -(void)dismiss{
     [self removeFromSuperview];
     [self.tap removeTarget:self action:@selector(tapAction:)];
-
 }
 
 -(void)setUIFrame{
     
-    self.titleLabel.size    = CGSizeMake(150, 30);
-    self.titleLabel.font    = [UIFont systemFontOfSize:29 weight:(UIFontWeightRegular)];
-    self.titleLabel.centerX = kScreenWidth/2.0;
-    self.titleLabel.y       = 150;
-    self.centerX            = kScreenWidth /2.0;
-    self.y                  = self.backView.sumHeight+20;
-    
-    self.nameField.size     = CGSizeMake(kScreenWidth/3.0*2, 45);
-    self.nameField.y        = self.titleLabel.sumHeight+45;
+    self.titleLabel.size           = CGSizeMake(150, 30);
+    self.titleLabel.font           = [UIFont systemFontOfSize:29 weight:(UIFontWeightRegular)];
+    self.titleLabel.centerX        = kScreenWidth/2.0;
+    self.titleLabel.y              = 150;
+    self.centerX                   = kScreenWidth /2.0;
+    self.y                         = self.backView.sumHeight+20;
+    self.nameField.size            = CGSizeMake(kScreenWidth/3.0*2, 45);
+    self.nameField.y               = self.titleLabel.sumHeight+45;
     self.nameField.backgroundColor = [UIColor cyanColor];
-    self.nameField.centerX = kScreenWidth/2.0;
-    
-    self.pwdField.size     = self.nameField.size;
-    self.pwdField.y        = self.nameField.sumHeight+15;
-    self.pwdField.backgroundColor = [UIColor cyanColor];
-    self.pwdField.centerX = self.nameField.centerX;
-    
-    self.loginBtn.size     = CGSizeMake(180, 45);
-    self.loginBtn.backgroundColor = [UIColor orangeColor];
-    self.loginBtn.y = self.pwdField.sumHeight+55;
-    self.loginBtn.centerX = self.nameField.centerX;
-    
+    self.nameField.centerX         = kScreenWidth/2.0;
+    self.pwdField.size             = self.nameField.size;
+    self.pwdField.y                = self.nameField.sumHeight+15;
+    self.pwdField.backgroundColor  = [UIColor cyanColor];
+    self.pwdField.centerX          = self.nameField.centerX;
+    self.loginBtn.size             = CGSizeMake(180, 45);
+    self.loginBtn.backgroundColor  = [UIColor orangeColor];
+    self.loginBtn.y                = self.pwdField.sumHeight+55;
+    self.loginBtn.centerX          = self.nameField.centerX;
 }
 
 

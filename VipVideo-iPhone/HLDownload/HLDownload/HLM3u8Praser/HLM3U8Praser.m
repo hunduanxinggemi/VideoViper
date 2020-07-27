@@ -106,6 +106,7 @@
             linkRangeBegin.location = 0;
         }
         NSRange linkRangeEnd = [remainData rangeOfString:@"#"];
+        
         // 下载url
         NSString* linkurl = [remainData substringWithRange:NSMakeRange(linkRangeBegin.location, linkRangeEnd.location - linkRangeBegin.location)];
         if (linkRangeBegin.length == 0) {

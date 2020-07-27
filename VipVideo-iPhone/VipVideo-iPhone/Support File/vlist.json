@@ -1,9 +1,9 @@
 {
     "platformlist": [
         {
-            "name": "CCTV直播",
-            "icon": "",
-            "url": "http://tv.cctv.com/live/cctv5/"
+            "name": "52",
+            "icon": "52",
+            "url": "http://www.52gaoqing.com"
         },
         {
             "name": "爱奇艺",
@@ -13,31 +13,31 @@
         },
         {
             "name": "腾讯视频",
-            "icon": "腾讯",
+            "icon": "腾讯视频.jpg",
             "canvip": 1,
             "url": "https://v.qq.com/"
         },
         {
             "name": "芒果",
-            "icon": "芒果",
+            "icon": "芒果TV.jpeg",
             "canvip": 1,
             "url": "https://www.mgtv.com/"
         },
         {
             "name": "优酷",
-            "icon": "优酷",
+            "icon": "优酷视频.jpg",
             "canvip": 1,
             "url": "https://www.youku.com/"
         },
         {
             "name": "bilibili",
             "icon": "bilibili",
-            "canvip": 0,
+            "canvip": 1,
             "url": "https://www.bilibili.com/"
         },
         {
             "name": "搜狐视频",
-            "icon": "搜狐",
+            "icon": "搜狐视频.jpeg",
             "canvip": 1,
             "url": "https://tv.sohu.com/"
         },
@@ -48,54 +48,136 @@
             "url": "https://www.le.com/"
         },
         {
+            "name": "31",
+            "icon": "4084@2x.png",
+            "canvip": 1,
+            "url": "https://m.31bz.com/index.html"
+        },
+        {
+            "name": "6080",
+            "icon": "4084@2x.png",
+            "canvip": 10,
+            "url": "http://www.yy6080.cn"
+        },
+        {
             "name": "第9影院",
-            "icon": "第9影院",
+            "icon": "周星驰.jpg",
             "url": "http://v.d9y.net/"
         },
         {
             "name": "电影天堂",
-            "icon": "电影天堂",
+            "icon": "电影天堂@2x.jpeg",
             "url": "http://www.btbtdy.net/"
         },
         {
             "name": "新视觉影院",
-            "icon": "4080",
+            "icon": "新视觉影院",
             "url": "http://www.yy3080.com/vod-type-id-1-pg-1.html/"
         },
         {
+            "name": "Vip影院",
+            "icon": "周星驰.jpg",
+            "url": "http://www.sjzvip.cn/index.html"
+        },
+        {
             "name": "达达兔",
-            "icon": "4080",
+            "icon": "周星驰.jpg",
             "url": "https://www.dadatu.co/"
         },
         {
             "name": "音乐破解",
-            "icon": "",
+            "icon": "网易音乐.jpg",
             "url": "https://music.sonimei.cn/"
         },
         {
-            "name": "在线看剧",
-            "icon": "",
+            "name": "百度人看剧",
+            "icon": "周星驰.jpg",
             "url": "http://www.91baidu.ren/"
         },
         {
-           "name": "周星驰",
-           "icon": "",
-           "url": ""
+           "name": "百灵鸟",
+           "icon": "周星驰.jpg",
+           "url":  "http://www.071o.com"
+        },
+        {
+           "name": "VIP影视",
+           "icon": "周星驰.jpg",
+           "url":  "https://www.weisfx.com"
+        },
+        {
+           "name": "美剧",
+           "icon": "国外电影.jpg",
+           "url":  "https://www.meijutt.tv"
+        },
+        {
+           "name": "美剧1",
+           "icon": "国外电影.jpg",
+           "url":  "https://91mjw.com/all"
+        },
+        {
+           "name": "美剧2",
+           "icon": "国外电影.jpg",
+           "url":  "https://www.jjmeiju.com"
+        },
+        {
+           "name": "美剧3",
+           "icon": "国外电影.jpg",
+           "url":  "http://www.5nj.com/?m=vod-type-id-8.html"
+        },
+        {
+           "name": "精选电影",
+           "icon": "周星驰.jpg",
+           "url":  "https://egame.qq.com/199681168"
         },
         {
            "name": "成龙",
-           "icon": "",
-           "url": ""
+           "icon": "成龙.jpg",
+           "url": "https://www.huya.com/11342386"
+        },
+        {
+           "name": "林振英",
+           "icon": "林振英.jpg",
+           "url": "https://egame.qq.com/363783415"
         },
         {
            "name": "李林杰",
-           "icon": "",
+           "icon": "李林杰.jpeg",
            "url": ""
         },
         {
+            "name": "张大仙",
+            "icon": "张大仙.jpeg",
+            "url": "https://www.huya.com/688"
+        },
+        {
+            "name": "Faker",
+            "icon": "Faker.jpg",
+            "url": "https://www.douyu.com/1691127"
+        },
+        {
+           "name": "经典电影",
+           "icon": "Video_normal.jpeg",
+           "url": "https://www.huya.com/qndyg"
+        },
+        {
+            "name": "精选电影",
+            "icon": "Video_normal.jpeg",
+            "url": "https://www.douyu.com/6763930"
+        },
+        {
+           "name": "马东锡",
+           "icon": "马东锡.jpg",
+           "url": "https://www.huya.com/16144175"
+        },
+        {
+           "name": "国外电影",
+           "icon": "国外电影.jpg",
+           "url": "https://egame.qq.com/382971876"
+        },
+        {
            "name": "甄子丹",
-           "icon": "",
-           "url": ""
+           "icon": "甄子丹.jpg",
+           "url": "https://www.huya.com/11352935"
         }
     ],
     

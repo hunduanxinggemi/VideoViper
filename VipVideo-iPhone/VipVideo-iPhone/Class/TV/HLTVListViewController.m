@@ -207,11 +207,17 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSString * userPhone = [[NSUserDefaults standardUserDefaults] objectForKey:MyPhone];
+    NSArray * phoneArr = [VipURLManager sharedInstance].phoneArray;
+    if (![phoneArr containsObject:userPhone] || ![LoginModel checkVipDate]) {
+        [SVProgressHUD showErrorWithStatus:@"您还不是VIP用户或者VIP已经到期，暂时无法进行观影。请先购买（续费）会员资格。"];
+        return;
+    }
     if (indexPath.row < [self.dataSource count]) {
         
         ListTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         MMovieModel *model =  self.dataSource[indexPath.row];
-
         // 可播，则转移到下一个播放
         if (self.autoPlaySwitch.isOn && (model.canPlay == YES)) {
             [self autoPlayNextVideo:indexPath delegate:self];

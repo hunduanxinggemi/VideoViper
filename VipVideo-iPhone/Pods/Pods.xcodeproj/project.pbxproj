@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = Bugly;
+			productName = Bugly;
 		};
 /* End PBXAggregateTarget section */
 
@@ -86,7 +87,10 @@
 		415113F49D0BB13F7563F4004A8F1486 /* DDRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EE958B88277C275CC9D428EE67E1DD /* DDRange.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		41D153F0653B3F5B41D3D007532C357A /* HTTPAuthenticationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 26EAB6C263A52C5F1DF4738699C201F4 /* HTTPAuthenticationRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42B494066092137DDED12340B262D680 /* NJKWebViewProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5AC7E25A637C39496D7668638FA8FF /* NJKWebViewProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		434B2D1824CAE9C700C4F3F0 /* webNext@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 434B2D1624CAE9C700C4F3F0 /* webNext@2x.png */; };
+		434B2D1924CAE9C700C4F3F0 /* webBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 434B2D1724CAE9C700C4F3F0 /* webBack@2x.png */; };
 		43B203E1A3DA8F85D621B298A7A05ED3 /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D0B80D96E897C0642BD9ECFF954539 /* DDMultiFormatter.m */; };
+		43DBCE4924CAC41600086ACB /* download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DBCE4824CAC41600086ACB /* download@2x.png */; };
 		43F4145D7ACE80E2F22546A9ED2258EB /* DDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 4476B97DEB961C777DD91FD4B787B0B5 /* DDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4705E66D86ACBA7F0D57C27BD6BAD30C /* DDASLLogCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = C22ADA6E27269D65A289D8718A3D6676 /* DDASLLogCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4795E32093478C003B06E21808E45FA8 /* AXIndicatorView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D13817A3CD8DD37ADA020399681FA /* AXIndicatorView-dummy.m */; };
@@ -423,15 +427,15 @@
 		0018D79D8A997B025578D350059C8C00 /* Pods-VipVideo-iPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VipVideo-iPhone.release.xcconfig"; sourceTree = "<group>"; };
 		012C7774053A5ACBE7D286B9A2D7B4EB /* AXIndicatorView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AXIndicatorView-prefix.pch"; sourceTree = "<group>"; };
 		0198D8B39CE506AC5F351509B8A60D14 /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDDispatchQueueLogFormatter.h; path = Sources/CocoaLumberjack/include/DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
-		01E48141F52C6DD65B8857560E212A1A /* FTPopOverMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FTPopOverMenu.framework; path = FTPopOverMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0257BAA41B6166B46297427B1FCAA913 /* AXNavigationBackItemInjection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AXNavigationBackItemInjection.framework; path = AXNavigationBackItemInjection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01E48141F52C6DD65B8857560E212A1A /* FTPopOverMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FTPopOverMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0257BAA41B6166B46297427B1FCAA913 /* AXNavigationBackItemInjection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AXNavigationBackItemInjection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02785F031B818A8B816678B0BB01A313 /* NSArray+.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+.h"; path = "HLAdditions/NSArray+.h"; sourceTree = "<group>"; };
 		02C207B35FE7D27B0760BEA4B4C137A5 /* Aspects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Aspects-prefix.pch"; sourceTree = "<group>"; };
 		060A2417C5514745A6A289CD46746C05 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		0659678479A62A126289297A87065E7E /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		072FE30529055606DE6FF2ABCC8BCEF7 /* HLAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HLAdditions.h; path = HLAdditions/HLAdditions.h; sourceTree = "<group>"; };
 		081CC7DBF9E59549B7ACA0E42A6FC3D6 /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDDispatchQueueLogFormatter.m; path = Sources/CocoaLumberjack/Extensions/DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
-		0AAB46C336F618F523ED7D422285CFEC /* CocoaHTTPServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaHTTPServer.framework; path = CocoaHTTPServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AAB46C336F618F523ED7D422285CFEC /* CocoaHTTPServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaHTTPServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABCC986A447447C13633D719128419D /* DDMultiFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDMultiFormatter.h; path = Sources/CocoaLumberjack/include/DDMultiFormatter.h; sourceTree = "<group>"; };
 		0B874B240970A5B2489EBBDC588AC7A2 /* Aspects.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Aspects.modulemap; sourceTree = "<group>"; };
 		0C2F201C40E8287B72F32413339E1AAE /* AXSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AXSecurityPolicy.m; path = AXWebViewController/AXWebViewController/Security/AXSecurityPolicy.m; sourceTree = "<group>"; };
@@ -459,7 +463,7 @@
 		1D615D846F78059F04044C99DCE596A5 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		1EA3E5E378E2893E0D6FE7589898B728 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Sources/CocoaLumberjack/DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
 		1F7EA914B7E02F65C928BF596714B297 /* HTTPMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTPMessage.h; path = Core/HTTPMessage.h; sourceTree = "<group>"; };
-		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		201ADCA7F43461062BD79C7C4C56137E /* NJKWebViewProgress-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NJKWebViewProgress-Info.plist"; sourceTree = "<group>"; };
 		20E49E1D97AE7C4316D99E42C295177F /* DELETEResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DELETEResponse.h; path = Extensions/WebDAV/DELETEResponse.h; sourceTree = "<group>"; };
 		224B3DD32AA990AC3D917DD71FE2AB33 /* CLIColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CLIColor.m; path = Sources/CocoaLumberjack/CLI/CLIColor.m; sourceTree = "<group>"; };
@@ -486,7 +490,7 @@
 		325B3B7E6B42B1F2B85E9C7529E214AF /* CocoaAsyncSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-umbrella.h"; sourceTree = "<group>"; };
 		34ED2A0B852115EFAA71A308C7A6E283 /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
 		35F084CDF1972626DEB219CABA9A2959 /* CocoaHTTPServer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaHTTPServer.modulemap; sourceTree = "<group>"; };
-		3670E5DAFCB8E406A8CD3314363C2EFE /* HLAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HLAdditions.framework; path = HLAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3670E5DAFCB8E406A8CD3314363C2EFE /* HLAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HLAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FE6D66E673858F27DD2B5F7D277B72 /* DZNEmptyDataSet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DZNEmptyDataSet.modulemap; sourceTree = "<group>"; };
 		3704B039B76341BAA5B7DC6B2F5378FD /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		39CE5210BF48383945BAF23DBC5B58EB /* AXNavigationBackItemInjection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AXNavigationBackItemInjection.debug.xcconfig; sourceTree = "<group>"; };
@@ -498,7 +502,10 @@
 		3FADDF057A6187E26B17D26B4D5BA66B /* DDASLLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogger.m; path = Sources/CocoaLumberjack/DDASLLogger.m; sourceTree = "<group>"; };
 		4240579E070B1425424A8E58CA56E8B2 /* NSDictionary+.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+.m"; path = "HLAdditions/NSDictionary+.m"; sourceTree = "<group>"; };
 		42C01BF29629E3B8E945E41A9DD2FDAE /* CocoaHTTPServer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaHTTPServer-dummy.m"; sourceTree = "<group>"; };
+		434B2D1624CAE9C700C4F3F0 /* webNext@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "webNext@2x.png"; sourceTree = "<group>"; };
+		434B2D1724CAE9C700C4F3F0 /* webBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "webBack@2x.png"; sourceTree = "<group>"; };
 		434DEEDD610A44620FA49197AA4982BB /* AXNavigationBackItemInjection-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AXNavigationBackItemInjection-umbrella.h"; sourceTree = "<group>"; };
+		43DBCE4824CAC41600086ACB /* download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download@2x.png"; sourceTree = "<group>"; };
 		4476B97DEB961C777DD91FD4B787B0B5 /* DDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Sources/CocoaLumberjack/include/DDLog.h; sourceTree = "<group>"; };
 		44D76D38E71C314F027AFEE5A11507A9 /* AXWebViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AXWebViewController.modulemap; sourceTree = "<group>"; };
 		475C10C5CDD99B95BC09C00F2409EF30 /* DDFileLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Sources/CocoaLumberjack/include/DDFileLogger.h; sourceTree = "<group>"; };
@@ -531,9 +538,9 @@
 		597123A45A523DF8B7E48C9961315420 /* DDLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLog.m; path = Sources/CocoaLumberjack/DDLog.m; sourceTree = "<group>"; };
 		5A1016000CF960DCB2306068EE4602E8 /* DDLoggerNames.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLoggerNames.m; path = Sources/CocoaLumberjack/DDLoggerNames.m; sourceTree = "<group>"; };
 		5A89A43B26155CF02D6164EE303F6CEF /* CocoaLumberjack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaLumberjack.debug.xcconfig; sourceTree = "<group>"; };
-		5B4AF9CC3A9BA0C4FEC866305B59A9BE /* AXIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AXIndicatorView.framework; path = AXIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B4AF9CC3A9BA0C4FEC866305B59A9BE /* AXIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AXIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D999BCCC38D071EB02DA1B15B02E63B /* DDFileLogger+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDFileLogger+Internal.h"; path = "Sources/CocoaLumberjack/DDFileLogger+Internal.h"; sourceTree = "<group>"; };
-		5DA4577FE3BC4A03751108FFED07B385 /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DZNEmptyDataSet.framework; path = DZNEmptyDataSet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA4577FE3BC4A03751108FFED07B385 /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DZNEmptyDataSet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECFEF803FD51A223DD9BA2F055D29C5 /* UIView+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additions.m"; path = "HLAdditions/UIView+Additions.m"; sourceTree = "<group>"; };
 		5FBAD172EA2A95209FF4FC4B6246191F /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		6039366E87822775D5D01956A8129A13 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
@@ -557,9 +564,9 @@
 		69843E8CCA6FCF35EECFBDC16AF5077E /* Aspects-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Aspects-Info.plist"; sourceTree = "<group>"; };
 		6AE46A9AF7B1C71511357A51026C8FC8 /* DZNEmptyDataSet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DZNEmptyDataSet-umbrella.h"; sourceTree = "<group>"; };
 		6B1647AE02498494DE2F05A0AEAE7549 /* DDOSLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDOSLogger.h; path = Sources/CocoaLumberjack/include/DDOSLogger.h; sourceTree = "<group>"; };
-		6C741A9D65C9C41BC1D59E6A6802585C /* AXWebViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AXWebViewController.framework; path = AXWebViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C741A9D65C9C41BC1D59E6A6802585C /* AXWebViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AXWebViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C8A5F7EB0F3B4E8E14F8420C78B583C /* MultipartFormDataParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MultipartFormDataParser.h; path = Core/Mime/MultipartFormDataParser.h; sourceTree = "<group>"; };
-		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDEFD3DEC05136F7150F11074468854 /* NSData+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+Additions.h"; path = "HLAdditions/NSData+Additions.h"; sourceTree = "<group>"; };
 		6DF2CE1F19B9F7DB1E8AEBD9936EC33D /* DDLoggerNames.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLoggerNames.h; path = Sources/CocoaLumberjack/include/DDLoggerNames.h; sourceTree = "<group>"; };
 		6E4B5C93C1ABF34D3BBD6F4B9529AB57 /* AXPracticalHUDAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AXPracticalHUDAnimator.h; path = AXPracticalHUD/AXPracticalHUD/Animators/AXPracticalHUDAnimator.h; sourceTree = "<group>"; };
@@ -605,7 +612,7 @@
 		8B08980F1E2076BCD860B089F48A991A /* Masonry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.debug.xcconfig; sourceTree = "<group>"; };
 		8C12BB6480000C501C983BD5758992F1 /* AXIndicatorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AXIndicatorView.modulemap; sourceTree = "<group>"; };
 		8C9C5A8EC7746C310073D56CEB81FE1F /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
-		8DBCA18C68802929C6DF102DF60BB052 /* AXPracticalHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AXPracticalHUD.framework; path = AXPracticalHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DBCA18C68802929C6DF102DF60BB052 /* AXPracticalHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AXPracticalHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE3BFD9B251B1E4801840771DDD9203 /* DDAssertMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAssertMacros.h; path = Sources/CocoaLumberjack/include/DDAssertMacros.h; sourceTree = "<group>"; };
 		8E1AF6EB1DF9827AB5389319B0602ED2 /* AXPracticalHUDContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AXPracticalHUDContentView.h; path = AXPracticalHUD/AXPracticalHUD/ContentView/AXPracticalHUDContentView.h; sourceTree = "<group>"; };
 		8F6AA13C49175C27BCE6DAE0BB54A470 /* AXPopNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AXPopNavigationController.h; path = AXNavigationBackItemInjection/AXNavigationBackItemInjection/AXPopNavigationController.h; sourceTree = "<group>"; };
@@ -615,7 +622,7 @@
 		92C967CF0F13F02B2EA672E29B83D7AD /* HLUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HLUtilities.h; path = HLAdditions/HLUtilities.h; sourceTree = "<group>"; };
 		9470FC2ED221DE48A43B52F10DF01707 /* HTTPConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTTPConnection.h; path = Core/HTTPConnection.h; sourceTree = "<group>"; };
 		95E54E0DAE2C68EBDF24C4662A6B8664 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
-		9808BF74538141204E4EB5B49809FE77 /* Aspects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Aspects.framework; path = Aspects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9808BF74538141204E4EB5B49809FE77 /* Aspects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Aspects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		983F961514D0FB1646A7AB38F967729B /* NSDictionary+.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+.h"; path = "HLAdditions/NSDictionary+.h"; sourceTree = "<group>"; };
 		98E982624ADD05B9DD1BC81CD48949F5 /* AXNavigationBackItemInjection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AXNavigationBackItemInjection.release.xcconfig; sourceTree = "<group>"; };
 		99415D17F585D65257093F79C71A8767 /* CocoaLumberjack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaLumberjack.release.xcconfig; sourceTree = "<group>"; };
@@ -625,7 +632,7 @@
 		9B851FB22F31697F02B1E592987C9434 /* AXIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AXIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEF571ABA2760FB8A9A6E591A507C40 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDContextFilterLogFormatter.m; path = Sources/CocoaLumberjack/Extensions/DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
 		9C4FECBAB31F609659319C6300CF5FFB /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E1AFDD4BA3CF2D5AB2EA4FD97DD2A9F /* AXCircleProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AXCircleProgressView.m; path = AXPracticalHUD/AXPracticalHUD/ProgressViews/AXCircleProgressView.m; sourceTree = "<group>"; };
 		9E40222EE72F3429580D33072C6A93BD /* EXTScope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTScope.h; path = HLAdditions/extobjc/EXTScope.h; sourceTree = "<group>"; };
 		9F05356CF558B0E65976B234EF2E8B77 /* CocoaAsyncSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.release.xcconfig; sourceTree = "<group>"; };
@@ -636,7 +643,7 @@
 		A1381B51606E66C8D296B9F4EC1F0D56 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
 		A39ECE09585C8E692689FEA075F7E116 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		A42F2D782E22D8028DF48FE44ADC6A45 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NJKWebViewProgressView.h; path = NJKWebViewProgress/NJKWebViewProgressView.h; sourceTree = "<group>"; };
-		A47916549A5A527E5391B0308C0B6DF1 /* NJKWebViewProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NJKWebViewProgress.framework; path = NJKWebViewProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A47916549A5A527E5391B0308C0B6DF1 /* NJKWebViewProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NJKWebViewProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47C532A4FDF1E962C30E658922A5991 /* AXPopNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AXPopNavigationController.m; path = AXNavigationBackItemInjection/AXNavigationBackItemInjection/AXPopNavigationController.m; sourceTree = "<group>"; };
 		A6A2BE4C8632BDEB541D4CEAA45FF888 /* WebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WebSocket.h; path = Core/WebSocket.h; sourceTree = "<group>"; };
 		A9C632AB75D8B8CFBC7CA9CA7A0F1DEA /* Pods-VipVideo-iPhone.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VipVideo-iPhone.modulemap"; sourceTree = "<group>"; };
@@ -667,7 +674,7 @@
 		C0CBAEA691E3AE5E80CAF00E54C6C555 /* metamacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = metamacros.h; path = HLAdditions/extobjc/metamacros.h; sourceTree = "<group>"; };
 		C22ADA6E27269D65A289D8718A3D6676 /* DDASLLogCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogCapture.h; path = Sources/CocoaLumberjack/include/DDASLLogCapture.h; sourceTree = "<group>"; };
 		C250B10AE7BA9C992D82CA00516AEB7F /* AXCircleProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AXCircleProgressView.h; path = AXPracticalHUD/AXPracticalHUD/ProgressViews/AXCircleProgressView.h; sourceTree = "<group>"; };
-		C261436D14052AE3C35F240BCD155CAC /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaLumberjack.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C261436D14052AE3C35F240BCD155CAC /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C934C9399CCC684DCD0076EDC03F17 /* FTPopOverMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FTPopOverMenu-dummy.m"; sourceTree = "<group>"; };
 		C31F2855EBEB0B6FAC06F3ABEC4B22BD /* DZNEmptyDataSet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DZNEmptyDataSet.release.xcconfig; sourceTree = "<group>"; };
 		C3730492F160955BF49070C0A490EDF5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
@@ -713,7 +720,7 @@
 		E6D388FDE82639AAF276A921F4BEA74A /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		E71155CCD059B5F591C6E42FD1B06F2C /* NJKWebViewProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NJKWebViewProgress-umbrella.h"; sourceTree = "<group>"; };
 		E7F464AAB4EB8E4C6E37621EE6A7D3BC /* PUTResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PUTResponse.h; path = Extensions/WebDAV/PUTResponse.h; sourceTree = "<group>"; };
-		E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SVProgressHUD.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99C729959C60DB329633C64791128DE /* SVProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		EBFAB2B93927C5566D230419AF176C59 /* DDRange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDRange.h; path = Core/Categories/DDRange.h; sourceTree = "<group>"; };
 		EC4BC5413F35DBCE3D9B446EA99FE791 /* AXWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AXWebViewController.m; path = AXWebViewController/AXWebViewController/AXWebViewController.m; sourceTree = "<group>"; };
@@ -729,7 +736,7 @@
 		F7B56925E40984CFA34A3FD09A3C655C /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		F82E5D034CF8A8D265245AFE044F0ED8 /* DDASLLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogger.h; path = Sources/CocoaLumberjack/include/DDASLLogger.h; sourceTree = "<group>"; };
 		F8EA492AF3663FF2834251417D276235 /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
-		FCFF0941F16983EA4E019916334F0FB4 /* Pods_VipVideo_iPhone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_VipVideo_iPhone.framework; path = "Pods-VipVideo-iPhone.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCFF0941F16983EA4E019916334F0FB4 /* Pods_VipVideo_iPhone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VipVideo_iPhone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD72410A2CD16CFE1C683DE549B54D69 /* CocoaAsyncSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.debug.xcconfig; sourceTree = "<group>"; };
 		FE1890B797D2C7DFEA52F82E29047EA2 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
 		FF5E2DB3C974F252C0F110DE4DB5F5C5 /* NSArray+.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+.m"; path = "HLAdditions/NSArray+.m"; sourceTree = "<group>"; };
@@ -931,7 +938,6 @@
 				69646084B7CCCAAD55D74B0DE3900015 /* FTPopOverMenu.m */,
 				90009EE1EFD0B3B506D9AFCBD34B5344 /* Support Files */,
 			);
-			name = FTPopOverMenu;
 			path = FTPopOverMenu;
 			sourceTree = "<group>";
 		};
@@ -995,7 +1001,6 @@
 				F7B56925E40984CFA34A3FD09A3C655C /* ViewController+MASAdditions.m */,
 				7EBEA85A2722A344374A04E88864293E /* Support Files */,
 			);
-			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -1060,7 +1065,6 @@
 				0D4290F08B1EE73D2D95E822932AC1EC /* Frameworks */,
 				241B26C4606231DA521D501FCC8BE51E /* Support Files */,
 			);
-			name = Bugly;
 			path = Bugly;
 			sourceTree = "<group>";
 		};
@@ -1091,6 +1095,9 @@
 		48C2CBD5B7C83366F1C673C41EB3E67F /* AXWebViewController */ = {
 			isa = PBXGroup;
 			children = (
+				43DBCE4824CAC41600086ACB /* download@2x.png */,
+				434B2D1724CAE9C700C4F3F0 /* webBack@2x.png */,
+				434B2D1624CAE9C700C4F3F0 /* webNext@2x.png */,
 				DA445C539D9B52189019D5DF2ED7EC86 /* AXSecurityPolicy.h */,
 				0C2F201C40E8287B72F32413339E1AAE /* AXSecurityPolicy.m */,
 				D7725246F137E9D6CD1BA2AFDCCFB538 /* AXWebViewController.h */,
@@ -1100,7 +1107,6 @@
 				AA1C0270C838B12EA36741B571F3F5FC /* Resources */,
 				2A0803C2E85AA5F5D31068DD885365A2 /* Support Files */,
 			);
-			name = AXWebViewController;
 			path = AXWebViewController;
 			sourceTree = "<group>";
 		};
@@ -1122,7 +1128,6 @@
 				836A5C1FA8048726ECB30D3FF46C5BB5 /* Resources */,
 				2B857BB6DEA3D5AA416D8352C8DC92FE /* Support Files */,
 			);
-			name = AXPracticalHUD;
 			path = AXPracticalHUD;
 			sourceTree = "<group>";
 		};
@@ -1133,7 +1138,6 @@
 				A47C532A4FDF1E962C30E658922A5991 /* AXPopNavigationController.m */,
 				B73E2D47CCA1993E9FCB666C4F2951C9 /* Support Files */,
 			);
-			name = AXNavigationBackItemInjection;
 			path = AXNavigationBackItemInjection;
 			sourceTree = "<group>";
 		};
@@ -1189,7 +1193,6 @@
 				89643BAA36BE84F05DB43AFF0BA4C249 /* Aspects.m */,
 				1CA0C354C8A32D94BB01D68248D7DD8E /* Support Files */,
 			);
-			name = Aspects;
 			path = Aspects;
 			sourceTree = "<group>";
 		};
@@ -1215,7 +1218,6 @@
 				C6CAA01AAC6CC35B5A4C1891F0311645 /* UIScrollView+EmptyDataSet.m */,
 				69604B73E383ABEDC97774642338B729 /* Support Files */,
 			);
-			name = DZNEmptyDataSet;
 			path = DZNEmptyDataSet;
 			sourceTree = "<group>";
 		};
@@ -1256,7 +1258,6 @@
 				EAD4C53F82AB838DCDC7263434A138DE /* Resources */,
 				0D8F95AF464CA63E1F6A000766D52DEE /* Support Files */,
 			);
-			name = SVProgressHUD;
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -1338,7 +1339,6 @@
 				8212FB60E6C9E2D2F546DF6E2010163D /* GCDAsyncUdpSocket.m */,
 				8C43142784284F690CE2162C435C24A8 /* Support Files */,
 			);
-			name = CocoaAsyncSocket;
 			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
@@ -1370,7 +1370,6 @@
 				8A29A476F56D319792D53B249DAEE1D1 /* UIViewController+.m */,
 				479D04A6D8A1760A236928D9AE61DC47 /* Support Files */,
 			);
-			name = HLAdditions;
 			path = HLAdditions;
 			sourceTree = "<group>";
 		};
@@ -1404,7 +1403,6 @@
 				5A40419117251480E587B32213DCFBC3 /* ProgressView */,
 				ACF33B8529174F87FF14D55FED1E644E /* Support Files */,
 			);
-			name = NJKWebViewProgress;
 			path = NJKWebViewProgress;
 			sourceTree = "<group>";
 		};
@@ -1455,7 +1453,6 @@
 				3D50D9641F0670603EB6EDC016647F4A /* WebSocket.m */,
 				18BF0451801F3B1A226221540FE0B3D7 /* Support Files */,
 			);
-			name = CocoaHTTPServer;
 			path = CocoaHTTPServer;
 			sourceTree = "<group>";
 		};
@@ -1519,7 +1516,6 @@
 				6F04D1DD79DC1D6BE5D91B91522C0A6B /* Resources */,
 				3998AD7A4C83C1A44230B1FFDD13540C /* Support Files */,
 			);
-			name = AXIndicatorView;
 			path = AXIndicatorView;
 			sourceTree = "<group>";
 		};
@@ -1570,7 +1566,6 @@
 				8AA65653EE8B22A62C0DCB12F60D99B2 /* Core */,
 				B3A1BE120B2259C996D8D22B00386561 /* Support Files */,
 			);
-			name = CocoaLumberjack;
 			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
@@ -2148,6 +2143,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434B2D1824CAE9C700C4F3F0 /* webNext@2x.png in Resources */,
+				434B2D1924CAE9C700C4F3F0 /* webBack@2x.png in Resources */,
+				43DBCE4924CAC41600086ACB /* download@2x.png in Resources */,
 				A608754ED21BCA7EEC934436C3D306B1 /* AXWebViewController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2859,6 +2857,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -3203,6 +3202,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

@@ -35,17 +35,18 @@
     self.iconImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     self.iconImageView.backgroundColor = [UIColor lightGrayColor];
     self.iconImageView.layer.cornerRadius = 10;
+    [self.iconImageView setClipsToBounds:YES];
+    self.iconImageView.contentMode = UIViewContentModeScaleToFill;
     
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     self.titleLabel.textColor = [UIColor lightGrayColor];
     self.titleLabel.font = [UIFont systemFontOfSize:13];
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
-    
     [self.contentView addSubview:self.iconImageView];
     [self.contentView addSubview:self.titleLabel];
     
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.height.mas_equalTo(self.contentView.mas_width).multipliedBy(2/3.0);
+        make.width.height.mas_equalTo(self.contentView.mas_width).multipliedBy(4/5.0);
         make.center.equalTo(self.contentView);
     }];
     
@@ -128,16 +129,27 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    id object = self.dataArray[indexPath.row];
-
-    HLWebVideoViewController *videoVC = [[HLWebVideoViewController alloc] init];
-    videoVC.urlItem = object;
-    NSString * tapUrl  = videoVC.urlItem.url;
-    [[NSUserDefaults standardUserDefaults] setValue:tapUrl forKey:HLTapUrl];
+    id object             = self.dataArray[indexPath.row];
+    NSString * userPhone  = [[NSUserDefaults standardUserDefaults] objectForKey:MyPhone];
+    NSArray * vipPhones   = [VipURLManager sharedInstance].phoneArray;
+    NSString * validateStr = [LoginModel getUserValidate];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:validateStr forKey:LoginDate];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    UINavigationController *videoNav = [[UINavigationController alloc] initWithRootViewController:videoVC];
-    videoNav.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:videoNav animated:YES completion:nil];
+    
+    if ([vipPhones containsObject:userPhone] && [LoginModel checkVipDate]) {//校验权限
+        HLWebVideoViewController *videoVC = [[HLWebVideoViewController alloc] init];
+        videoVC.urlItem = object;
+        NSString * tapUrl  = videoVC.urlItem.url;
+        [[NSUserDefaults standardUserDefaults] setValue:tapUrl forKey:HLTapUrl];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        UINavigationController *videoNav = [[UINavigationController alloc] initWithRootViewController:videoVC];
+        videoNav.modalPresentationStyle = UIModalPresentationFullScreen;
+        [self presentViewController:videoNav animated:YES completion:nil];
+    }else{
+        [SVProgressHUD showErrorWithStatus:@"您还不是VIP用户或者VIP已经到期，暂时无法进行观影。请先购买（续费）会员资格。"];
+        return;
+    }
 }
 
 @end

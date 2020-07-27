@@ -81,7 +81,6 @@
     if (!_leftButton) {
         UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [leftButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
-        //        [leftButton setTitle:@"平台" forState:UIControlStateNormal];
         leftButton.titleLabel.font = [UIFont systemFontOfSize:14];
         [leftButton setTitleColor:self.view.tintColor forState:UIControlStateNormal];
         leftButton.frame = CGRectMake(0, 0, 30, 44);
@@ -97,10 +96,9 @@
     
     [NSURLProtocol registerClass:[HybridNSURLProtocol class]];
 
-    [[ UIApplication sharedApplication] setIdleTimerDisabled:NO];
-//    self.navigationButtonsHidden = NO;
+    [[ UIApplication sharedApplication] setIdleTimerDisabled:YES];
     if (@available(iOS 11.0, *)) {
-//        self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     } else {
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
@@ -131,21 +129,16 @@
     {
         configuration.menuWidth = 200;
         self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.rightButton]];
-//        [self.webView mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.edges.equalTo(self.view);
-//        }];
+        [self.webView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.view);
+        }];
     }
     else {
         
         self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.rightButton]];
-//        [self.webView mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.top.mas_equalTo(self).mas_offset(120);
-//            make.width.equalTo(200);
-//            make.height.equalTo(200);
-//            make.left.equalTo(0);
-//
-//        }];
-        
+        [self.webView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.view);
+        }];
     }
     
 }
@@ -243,10 +236,10 @@ static bool isShow = NO;
     }];
 }
 
-- (void)downloadClicked:(UIButton *)sender{
-    DownloadViewController *downloadVC = [[DownloadViewController alloc] init];
-    [self.navigationController pushViewController:downloadVC animated:YES];
-}
+//- (void)downloadClicked:(UIButton *)sender{
+//    DownloadViewController *downloadVC = [[DownloadViewController alloc] init];
+//    [self.navigationController pushViewController:downloadVC animated:YES];
+//}
 
 - (void)vipVideoCurrentApiWillChange:(NSNotification *)notification{
     NSString *url = [[_currentUrl componentsSeparatedByString:@"url="] lastObject];
@@ -282,6 +275,8 @@ static bool isShow = NO;
     NSLog(@"finalUrl = %@", finalUrl);
     [self loadURL:[NSURL URLWithString:finalUrl]];
 #endif
+    
+    
 }
 
 - (void)vipVideoRequestSueccess:(NSNotification *)notificaiton{

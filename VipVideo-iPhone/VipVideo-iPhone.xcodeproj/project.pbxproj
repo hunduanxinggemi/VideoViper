@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430173CE24C82E4B007AC43D /* nihaojiushiguang13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 430173CD24C82E4B007AC43D /* nihaojiushiguang13.jpg */; };
 		433D8550248F670100EEB3DA /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 433D8543248F670100EEB3DA /* NSString+PinYin4Cocoa.m */; };
 		433D8551248F670100EEB3DA /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 433D8544248F670100EEB3DA /* unicode_to_hanyu_pinyin.txt */; };
 		433D8552248F670100EEB3DA /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 433D8548248F670100EEB3DA /* PinyinHelper.m */; };
@@ -18,19 +19,34 @@
 		433D8558248F670100EEB3DA /* SearchTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 433D854F248F670100EEB3DA /* SearchTool.m */; };
 		433D855A248F700700EEB3DA /* video_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 433D8559248F700700EEB3DA /* video_normal@2x.png */; };
 		4344691524877FDA000FA605 /* vlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 4344691424877FDA000FA605 /* vlist.json */; };
+		434B2D1524CAE39400C4F3F0 /* download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 434B2D1424CAE39400C4F3F0 /* download@2x.png */; };
+		434E9D9A24A97A9D002232CF /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 434E9D9924A97A9D002232CF /* LoginModel.m */; };
 		435200C4248E40B7004E882C /* TVLiveList.json in Resources */ = {isa = PBXBuildFile; fileRef = 435200C3248E40B6004E882C /* TVLiveList.json */; };
+		4357A4E024C922C900DE8CC3 /* 腾讯视频.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A4DF24C922C900DE8CC3 /* 腾讯视频.jpg */; };
+		4357A4E224C9231200DE8CC3 /* 电影天堂@2x.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A4E124C9231200DE8CC3 /* 电影天堂@2x.jpeg */; };
+		4357A4E824C9276A00DE8CC3 /* 芒果TV.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A4E724C9276900DE8CC3 /* 芒果TV.jpeg */; };
+		4357A4EA24C927B600DE8CC3 /* 搜狐视频.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A4E924C927B600DE8CC3 /* 搜狐视频.jpeg */; };
+		4357A4EE24C9281F00DE8CC3 /* 乐视@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4357A4ED24C9281F00DE8CC3 /* 乐视@2x.png */; };
+		4357A4F024C9285600DE8CC3 /* 优酷视频.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A4EF24C9285600DE8CC3 /* 优酷视频.jpg */; };
+		4357A4F424C9294400DE8CC3 /* bilibili@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4357A4F324C9294300DE8CC3 /* bilibili@2x.png */; };
+		4357A4F624C929B400DE8CC3 /* 新视觉影院@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4357A4F524C929B400DE8CC3 /* 新视觉影院@2x.png */; };
+		4357A4F824C92A3D00DE8CC3 /* 成龙.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A4F724C92A3D00DE8CC3 /* 成龙.jpg */; };
+		4357A4FA24C92A8400DE8CC3 /* 林振英.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A4F924C92A8400DE8CC3 /* 林振英.jpg */; };
+		4357A4FC24C92ABB00DE8CC3 /* 李林杰.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A4FB24C92ABB00DE8CC3 /* 李林杰.jpeg */; };
+		4357A4FE24C92AE500DE8CC3 /* 张大仙.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A4FD24C92AE500DE8CC3 /* 张大仙.jpeg */; };
+		4357A50024C92B3B00DE8CC3 /* Faker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A4FF24C92B3B00DE8CC3 /* Faker.jpg */; };
+		4357A50224C92B7800DE8CC3 /* Video_normal.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A50124C92B7800DE8CC3 /* Video_normal.jpeg */; };
+		4357A50424C92BA900DE8CC3 /* 甄子丹.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A50324C92BA900DE8CC3 /* 甄子丹.jpg */; };
+		4357A50624C92BD300DE8CC3 /* 马东锡.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A50524C92BD200DE8CC3 /* 马东锡.jpg */; };
+		4357A50824C92C1100DE8CC3 /* 国外电影.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A50724C92C1100DE8CC3 /* 国外电影.jpg */; };
+		4357A50A24C92C4200DE8CC3 /* 周星驰.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A50924C92C4200DE8CC3 /* 周星驰.jpg */; };
+		4357A50C24C92CB500DE8CC3 /* 网易音乐.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4357A50B24C92CB500DE8CC3 /* 网易音乐.jpg */; };
 		435FC2A624A1929B00204DA2 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 435FC2A524A1929B00204DA2 /* UIView+Frame.m */; };
 		435FC2A924A192C000204DA2 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 435FC2A824A192C000204DA2 /* LoginView.m */; };
-		4378FF432490C1C800D1EED5 /* ViP.json in Resources */ = {isa = PBXBuildFile; fileRef = 4378FF422490C1C800D1EED5 /* ViP.json */; };
-		4F3A3A26220339B500930A31 /* 电影天堂.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A1C220339B500930A31 /* 电影天堂.png */; };
-		4F3A3A27220339B500930A31 /* 芒果@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A1D220339B500930A31 /* 芒果@2x.png */; };
 		4F3A3A28220339B500930A31 /* 4084@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A1E220339B500930A31 /* 4084@2x.png */; };
 		4F3A3A29220339B500930A31 /* 爱奇艺@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A1F220339B500930A31 /* 爱奇艺@2x.png */; };
 		4F3A3A2B220339B500930A31 /* 优酷@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A21220339B500930A31 /* 优酷@2x.png */; };
-		4F3A3A2C220339B500930A31 /* 乐视@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A22220339B500930A31 /* 乐视@2x.png */; };
-		4F3A3A2D220339B500930A31 /* 腾讯视频@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A23220339B500930A31 /* 腾讯视频@2x.png */; };
 		4F3A3A2E220339B500930A31 /* 52@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A24220339B500930A31 /* 52@2x.png */; };
-		4F3A3A2F220339B500930A31 /* 搜狐@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A25220339B500930A31 /* 搜狐@2x.png */; };
 		4F52603C220309CE0028DB62 /* BHBNetworkSpeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F52603B220309CE0028DB62 /* BHBNetworkSpeed.m */; };
 		4F52603F22031B000028DB62 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F52603E22031B000028DB62 /* back@2x.png */; };
 		4F62A60021EB761C0044C07D /* empty_placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F62A5FF21EB761C0044C07D /* empty_placeholder@2x.png */; };
@@ -72,7 +88,6 @@
 		C72EE47F214F51ED00288C1C /* MMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE46B214F51ED00288C1C /* MMovieModel.m */; };
 		C72EE480214F51ED00288C1C /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE46F214F51ED00288C1C /* ListTableViewCell.m */; };
 		C72EE487214F530000288C1C /* HLMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE486214F530000288C1C /* HLMineViewController.m */; };
-		C72EE489214F588D00288C1C /* download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72EE488214F588D00288C1C /* download@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +124,7 @@
 /* Begin PBXFileReference section */
 		374B924D2BF783FA18A84027 /* Pods-VipVideo-iPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipVideo-iPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone.debug.xcconfig"; sourceTree = "<group>"; };
 		3FFBABEA1A43DE0B38ED6A63 /* Pods-VipVideo-iPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipVideo-iPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone.release.xcconfig"; sourceTree = "<group>"; };
+		430173CD24C82E4B007AC43D /* nihaojiushiguang13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nihaojiushiguang13.jpg; sourceTree = "<group>"; };
 		433D853E248F670100EEB3DA /* SearchTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTool.h; sourceTree = "<group>"; };
 		433D8540248F670100EEB3DA /* PinyinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinHelper.h; sourceTree = "<group>"; };
 		433D8541248F670100EEB3DA /* HanyuPinyinOutputFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanyuPinyinOutputFormat.h; sourceTree = "<group>"; };
@@ -128,21 +144,37 @@
 		433D854F248F670100EEB3DA /* SearchTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTool.m; sourceTree = "<group>"; };
 		433D8559248F700700EEB3DA /* video_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_normal@2x.png"; sourceTree = "<group>"; };
 		4344691424877FDA000FA605 /* vlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vlist.json; sourceTree = "<group>"; };
+		434B2D1424CAE39400C4F3F0 /* download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download@2x.png"; sourceTree = "<group>"; };
+		434E9D9824A97A9D002232CF /* LoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		434E9D9924A97A9D002232CF /* LoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
 		435200C3248E40B6004E882C /* TVLiveList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TVLiveList.json; sourceTree = "<group>"; };
+		4357A4DF24C922C900DE8CC3 /* 腾讯视频.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "腾讯视频.jpg"; sourceTree = "<group>"; };
+		4357A4E124C9231200DE8CC3 /* 电影天堂@2x.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "电影天堂@2x.jpeg"; sourceTree = "<group>"; };
+		4357A4E724C9276900DE8CC3 /* 芒果TV.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "芒果TV.jpeg"; sourceTree = "<group>"; };
+		4357A4E924C927B600DE8CC3 /* 搜狐视频.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "搜狐视频.jpeg"; sourceTree = "<group>"; };
+		4357A4ED24C9281F00DE8CC3 /* 乐视@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "乐视@2x.png"; sourceTree = "<group>"; };
+		4357A4EF24C9285600DE8CC3 /* 优酷视频.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "优酷视频.jpg"; sourceTree = "<group>"; };
+		4357A4F324C9294300DE8CC3 /* bilibili@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bilibili@2x.png"; sourceTree = "<group>"; };
+		4357A4F524C929B400DE8CC3 /* 新视觉影院@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "新视觉影院@2x.png"; sourceTree = "<group>"; };
+		4357A4F724C92A3D00DE8CC3 /* 成龙.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "成龙.jpg"; sourceTree = "<group>"; };
+		4357A4F924C92A8400DE8CC3 /* 林振英.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "林振英.jpg"; sourceTree = "<group>"; };
+		4357A4FB24C92ABB00DE8CC3 /* 李林杰.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "李林杰.jpeg"; sourceTree = "<group>"; };
+		4357A4FD24C92AE500DE8CC3 /* 张大仙.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "张大仙.jpeg"; sourceTree = "<group>"; };
+		4357A4FF24C92B3B00DE8CC3 /* Faker.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Faker.jpg; sourceTree = "<group>"; };
+		4357A50124C92B7800DE8CC3 /* Video_normal.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Video_normal.jpeg; sourceTree = "<group>"; };
+		4357A50324C92BA900DE8CC3 /* 甄子丹.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "甄子丹.jpg"; sourceTree = "<group>"; };
+		4357A50524C92BD200DE8CC3 /* 马东锡.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "马东锡.jpg"; sourceTree = "<group>"; };
+		4357A50724C92C1100DE8CC3 /* 国外电影.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "国外电影.jpg"; sourceTree = "<group>"; };
+		4357A50924C92C4200DE8CC3 /* 周星驰.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "周星驰.jpg"; sourceTree = "<group>"; };
+		4357A50B24C92CB500DE8CC3 /* 网易音乐.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "网易音乐.jpg"; sourceTree = "<group>"; };
 		435FC2A424A1929B00204DA2 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		435FC2A524A1929B00204DA2 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		435FC2A724A192C000204DA2 /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		435FC2A824A192C000204DA2 /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
-		4378FF422490C1C800D1EED5 /* ViP.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ViP.json; sourceTree = "<group>"; };
-		4F3A3A1C220339B500930A31 /* 电影天堂.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "电影天堂.png"; sourceTree = "<group>"; };
-		4F3A3A1D220339B500930A31 /* 芒果@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "芒果@2x.png"; sourceTree = "<group>"; };
 		4F3A3A1E220339B500930A31 /* 4084@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4084@2x.png"; sourceTree = "<group>"; };
 		4F3A3A1F220339B500930A31 /* 爱奇艺@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "爱奇艺@2x.png"; sourceTree = "<group>"; };
 		4F3A3A21220339B500930A31 /* 优酷@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "优酷@2x.png"; sourceTree = "<group>"; };
-		4F3A3A22220339B500930A31 /* 乐视@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "乐视@2x.png"; sourceTree = "<group>"; };
-		4F3A3A23220339B500930A31 /* 腾讯视频@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "腾讯视频@2x.png"; sourceTree = "<group>"; };
 		4F3A3A24220339B500930A31 /* 52@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "52@2x.png"; sourceTree = "<group>"; };
-		4F3A3A25220339B500930A31 /* 搜狐@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜狐@2x.png"; sourceTree = "<group>"; };
 		4F52603A220309CE0028DB62 /* BHBNetworkSpeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHBNetworkSpeed.h; sourceTree = "<group>"; };
 		4F52603B220309CE0028DB62 /* BHBNetworkSpeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHBNetworkSpeed.m; sourceTree = "<group>"; };
 		4F52603E22031B000028DB62 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
@@ -281,16 +313,31 @@
 		4F3A3A1B220339B500930A31 /* viplist */ = {
 			isa = PBXGroup;
 			children = (
+				434B2D1424CAE39400C4F3F0 /* download@2x.png */,
 				433D8559248F700700EEB3DA /* video_normal@2x.png */,
-				4F3A3A1C220339B500930A31 /* 电影天堂.png */,
-				4F3A3A1D220339B500930A31 /* 芒果@2x.png */,
+				4357A4E124C9231200DE8CC3 /* 电影天堂@2x.jpeg */,
+				4357A4E724C9276900DE8CC3 /* 芒果TV.jpeg */,
 				4F3A3A1E220339B500930A31 /* 4084@2x.png */,
 				4F3A3A1F220339B500930A31 /* 爱奇艺@2x.png */,
 				4F3A3A21220339B500930A31 /* 优酷@2x.png */,
-				4F3A3A22220339B500930A31 /* 乐视@2x.png */,
-				4F3A3A23220339B500930A31 /* 腾讯视频@2x.png */,
+				4357A4EF24C9285600DE8CC3 /* 优酷视频.jpg */,
+				4357A4ED24C9281F00DE8CC3 /* 乐视@2x.png */,
+				4357A4F524C929B400DE8CC3 /* 新视觉影院@2x.png */,
+				4357A4DF24C922C900DE8CC3 /* 腾讯视频.jpg */,
 				4F3A3A24220339B500930A31 /* 52@2x.png */,
-				4F3A3A25220339B500930A31 /* 搜狐@2x.png */,
+				4357A4E924C927B600DE8CC3 /* 搜狐视频.jpeg */,
+				4357A4F324C9294300DE8CC3 /* bilibili@2x.png */,
+				4357A4F724C92A3D00DE8CC3 /* 成龙.jpg */,
+				4357A4F924C92A8400DE8CC3 /* 林振英.jpg */,
+				4357A4FB24C92ABB00DE8CC3 /* 李林杰.jpeg */,
+				4357A4FD24C92AE500DE8CC3 /* 张大仙.jpeg */,
+				4357A4FF24C92B3B00DE8CC3 /* Faker.jpg */,
+				4357A50324C92BA900DE8CC3 /* 甄子丹.jpg */,
+				4357A50724C92C1100DE8CC3 /* 国外电影.jpg */,
+				4357A50B24C92CB500DE8CC3 /* 网易音乐.jpg */,
+				4357A50924C92C4200DE8CC3 /* 周星驰.jpg */,
+				4357A50124C92B7800DE8CC3 /* Video_normal.jpeg */,
+				4357A50524C92BD200DE8CC3 /* 马东锡.jpg */,
 			);
 			path = viplist;
 			sourceTree = "<group>";
@@ -349,7 +396,7 @@
 		C70B57B62112ACA50024D60B /* Support File */ = {
 			isa = PBXGroup;
 			children = (
-				4378FF422490C1C800D1EED5 /* ViP.json */,
+				430173CD24C82E4B007AC43D /* nihaojiushiguang13.jpg */,
 				435200C3248E40B6004E882C /* TVLiveList.json */,
 				C72EE48C214F5D0900288C1C /* PrefixHeader.pch */,
 				C7240A9A1FA174D3000684F1 /* Main.storyboard */,
@@ -538,6 +585,8 @@
 				C72EE486214F530000288C1C /* HLMineViewController.m */,
 				435FC2A724A192C000204DA2 /* LoginView.h */,
 				435FC2A824A192C000204DA2 /* LoginView.m */,
+				434E9D9824A97A9D002232CF /* LoginModel.h */,
+				434E9D9924A97A9D002232CF /* LoginModel.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -619,32 +668,46 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4357A4F824C92A3D00DE8CC3 /* 成龙.jpg in Resources */,
 				C7240AA11FA174D3000684F1 /* LaunchScreen.storyboard in Resources */,
 				4F52603F22031B000028DB62 /* back@2x.png in Resources */,
 				C72EE448214F4BEE00288C1C /* platlist@2x.png in Resources */,
-				4F3A3A2F220339B500930A31 /* 搜狐@2x.png in Resources */,
 				C72EE449214F4BEE00288C1C /* VIP@2x.png in Resources */,
 				C7240A9C1FA174D3000684F1 /* Main.storyboard in Resources */,
-				4F3A3A26220339B500930A31 /* 电影天堂.png in Resources */,
 				4F3A3A2E220339B500930A31 /* 52@2x.png in Resources */,
-				4F3A3A27220339B500930A31 /* 芒果@2x.png in Resources */,
+				4357A50024C92B3B00DE8CC3 /* Faker.jpg in Resources */,
 				433D8551248F670100EEB3DA /* unicode_to_hanyu_pinyin.txt in Resources */,
 				4F62A60021EB761C0044C07D /* empty_placeholder@2x.png in Resources */,
-				4F3A3A2C220339B500930A31 /* 乐视@2x.png in Resources */,
+				4357A4FA24C92A8400DE8CC3 /* 林振英.jpg in Resources */,
+				4357A4E224C9231200DE8CC3 /* 电影天堂@2x.jpeg in Resources */,
+				4357A4F424C9294400DE8CC3 /* bilibili@2x.png in Resources */,
 				4F3A3A28220339B500930A31 /* 4084@2x.png in Resources */,
 				C72EE445214F460B00288C1C /* live@2x.png in Resources */,
+				4357A50A24C92C4200DE8CC3 /* 周星驰.jpg in Resources */,
+				4357A50424C92BA900DE8CC3 /* 甄子丹.jpg in Resources */,
+				4357A4FE24C92AE500DE8CC3 /* 张大仙.jpeg in Resources */,
+				4357A50224C92B7800DE8CC3 /* Video_normal.jpeg in Resources */,
+				4357A4EA24C927B600DE8CC3 /* 搜狐视频.jpeg in Resources */,
+				434B2D1524CAE39400C4F3F0 /* download@2x.png in Resources */,
 				4FB74BAC21CE868A00F52070 /* README.md in Resources */,
-				4378FF432490C1C800D1EED5 /* ViP.json in Resources */,
-				C72EE489214F588D00288C1C /* download@2x.png in Resources */,
+				4357A50C24C92CB500DE8CC3 /* 网易音乐.jpg in Resources */,
+				4357A4FC24C92ABB00DE8CC3 /* 李林杰.jpeg in Resources */,
+				4357A4E824C9276A00DE8CC3 /* 芒果TV.jpeg in Resources */,
 				435200C4248E40B7004E882C /* TVLiveList.json in Resources */,
+				4357A50824C92C1100DE8CC3 /* 国外电影.jpg in Resources */,
 				4344691524877FDA000FA605 /* vlist.json in Resources */,
 				4F3A3A29220339B500930A31 /* 爱奇艺@2x.png in Resources */,
 				4F3A3A2B220339B500930A31 /* 优酷@2x.png in Resources */,
+				4357A50624C92BD300DE8CC3 /* 马东锡.jpg in Resources */,
 				C72EE444214F460B00288C1C /* home@2x.png in Resources */,
 				C72EE474214F51ED00288C1C /* WMPlayer.bundle in Resources */,
+				4357A4F624C929B400DE8CC3 /* 新视觉影院@2x.png in Resources */,
+				4357A4EE24C9281F00DE8CC3 /* 乐视@2x.png in Resources */,
+				4357A4F024C9285600DE8CC3 /* 优酷视频.jpg in Resources */,
+				4357A4E024C922C900DE8CC3 /* 腾讯视频.jpg in Resources */,
 				C72EE44B214F51BD00288C1C /* mine@2x.png in Resources */,
 				433D855A248F700700EEB3DA /* video_normal@2x.png in Resources */,
-				4F3A3A2D220339B500930A31 /* 腾讯视频@2x.png in Resources */,
+				430173CE24C82E4B007AC43D /* nihaojiushiguang13.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +763,7 @@
 				C72EE47A214F51ED00288C1C /* FinishedViewController.m in Sources */,
 				433D8552248F670100EEB3DA /* PinyinHelper.m in Sources */,
 				435FC2A924A192C000204DA2 /* LoginView.m in Sources */,
+				434E9D9A24A97A9D002232CF /* LoginModel.m in Sources */,
 				4FB74BAA21CE85AC00F52070 /* UIButton+Addition.m in Sources */,
 				C72EE478214F51ED00288C1C /* QSPDownloadTool.m in Sources */,
 				433D8557248F670100EEB3DA /* PinYinForObjc.m in Sources */,
@@ -813,7 +877,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -864,8 +928,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -875,11 +940,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 374B924D2BF783FA18A84027 /* Pods-VipVideo-iPhone.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "Apple Development: haoran223@163.com (FJXYW7P96B)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9XD4LNV4JH;
+				CURRENT_PROJECT_VERSION = 1.1;
+				DEVELOPMENT_TEAM = 3B7CR825BY;
 				GCC_PREFIX_HEADER = "VipVideo-iPhone/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -887,11 +952,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dhr.demo1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dhr.viper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4169b125-e44b-4aca-a87c-6fc6ed81ea1f";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -900,11 +965,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3FFBABEA1A43DE0B38ED6A63 /* Pods-VipVideo-iPhone.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Development: haoran223@163.com (FJXYW7P96B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9XD4LNV4JH;
+				CURRENT_PROJECT_VERSION = 1.1;
+				DEVELOPMENT_TEAM = 3B7CR825BY;
 				GCC_PREFIX_HEADER = "VipVideo-iPhone/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -912,11 +977,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hr.demo;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dhr.viper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7e347f5b-4673-4593-bcfc-b65051128cdc";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
