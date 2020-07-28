@@ -214,6 +214,7 @@ static LoginView * loginView = nil;
         _nameField.tintColor   = [UIColor orangeColor];
         _nameField.layer.cornerRadius = 15;
         _nameField.clipsToBounds = YES;
+        _nameField.keyboardType  =  UIKeyboardTypeNumberPad;
     }
     return _nameField;
 }
@@ -230,6 +231,8 @@ static LoginView * loginView = nil;
         _pwdField.tintColor   = [UIColor orangeColor];
         _pwdField.layer.cornerRadius = 15;
         _pwdField.clipsToBounds = YES;
+        _pwdField.keyboardType  =  UIKeyboardTypeNumberPad;
+
 
     }
     return _pwdField;
