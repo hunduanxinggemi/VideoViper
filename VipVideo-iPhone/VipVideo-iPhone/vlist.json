@@ -65,19 +65,9 @@
             "url": "http://v.d9y.net/"
         },
         {
-            "name": "电影天堂",
-            "icon": "电影天堂@2x.jpeg",
-            "url": "http://www.btbtdy.net/"
-        },
-        {
             "name": "新视觉影院",
             "icon": "新视觉影院",
             "url": "http://www.yy3080.com/vod-type-id-1-pg-1.html/"
-        },
-        {
-            "name": "Vip影院",
-            "icon": "周星驰.jpg",
-            "url": "http://www.sjzvip.cn/index.html"
         },
         {
             "name": "达达兔",
@@ -90,6 +80,7 @@
             "url": "https://music.sonimei.cn/"
         },
         {
+            
             "name": "百度人看剧",
             "icon": "周星驰.jpg",
             "url": "http://www.91baidu.ren/"

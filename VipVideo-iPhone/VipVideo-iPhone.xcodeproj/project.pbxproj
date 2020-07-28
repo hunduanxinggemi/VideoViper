@@ -199,7 +199,7 @@
 		C70B57A52112AC200024D60B /* NSURLProtocol+UIWebVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+UIWebVIew.h"; sourceTree = "<group>"; };
 		C70EBD2A2016D4C500413F85 /* HLPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLPlayerViewController.h; sourceTree = "<group>"; };
 		C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLPlayerViewController.m; sourceTree = "<group>"; };
-		C7240A911FA174D3000684F1 /* VipVideo-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VipVideo-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7240A911FA174D3000684F1 /* VipVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VipVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7240A941FA174D3000684F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C7240A951FA174D3000684F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C7240A9B1FA174D3000684F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -397,14 +397,12 @@
 			isa = PBXGroup;
 			children = (
 				430173CD24C82E4B007AC43D /* nihaojiushiguang13.jpg */,
-				435200C3248E40B6004E882C /* TVLiveList.json */,
 				C72EE48C214F5D0900288C1C /* PrefixHeader.pch */,
 				C7240A9A1FA174D3000684F1 /* Main.storyboard */,
 				C7240A9D1FA174D3000684F1 /* Assets.xcassets */,
 				C7240A9F1FA174D3000684F1 /* LaunchScreen.storyboard */,
 				C7240AA21FA174D3000684F1 /* Info.plist */,
 				C7240AA31FA174D3000684F1 /* main.m */,
-				4344691424877FDA000FA605 /* vlist.json */,
 			);
 			path = "Support File";
 			sourceTree = "<group>";
@@ -423,7 +421,7 @@
 		C7240A921FA174D3000684F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C7240A911FA174D3000684F1 /* VipVideo-iPhone.app */,
+				C7240A911FA174D3000684F1 /* VipVideo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -432,6 +430,8 @@
 			isa = PBXGroup;
 			children = (
 				4FB74BAB21CE868A00F52070 /* README.md */,
+				435200C3248E40B6004E882C /* TVLiveList.json */,
+				4344691424877FDA000FA605 /* vlist.json */,
 				C7240A941FA174D3000684F1 /* AppDelegate.h */,
 				C7240A951FA174D3000684F1 /* AppDelegate.m */,
 				C70EBD2A2016D4C500413F85 /* HLPlayerViewController.h */,
@@ -612,7 +612,7 @@
 			);
 			name = "VipVideo-iPhone";
 			productName = "VipVideo-iPhone";
-			productReference = C7240A911FA174D3000684F1 /* VipVideo-iPhone.app */;
+			productReference = C7240A911FA174D3000684F1 /* VipVideo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -858,7 +858,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development: 1518591503@qq.com (3KN436HBW7)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -915,7 +915,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development: 1518591503@qq.com (3KN436HBW7)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -940,21 +940,22 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 374B924D2BF783FA18A84027 /* Pods-VipVideo-iPhone.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development: haoran223@163.com (FJXYW7P96B)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = 3B7CR825BY;
 				GCC_PREFIX_HEADER = "VipVideo-iPhone/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dhr.viper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dhr.demo;
+				PRODUCT_NAME = VipVideo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -965,21 +966,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3FFBABEA1A43DE0B38ED6A63 /* Pods-VipVideo-iPhone.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development: haoran223@163.com (FJXYW7P96B)";
+				CODE_SIGN_IDENTITY = "Apple Development: 1518591503@qq.com (3KN436HBW7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = 3B7CR825BY;
 				GCC_PREFIX_HEADER = "VipVideo-iPhone/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dhr.viper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dhr.viper2;
+				PRODUCT_NAME = VipVideo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				TARGETED_DEVICE_FAMILY = 1;
