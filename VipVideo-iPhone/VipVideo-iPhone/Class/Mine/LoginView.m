@@ -206,15 +206,15 @@ static LoginView * loginView = nil;
 {
     if (!_nameField)
     {
-        _nameField             = [[UITextField alloc] init];
-        _nameField.delegate    = self;
-        _nameField.placeholder = @"    请输入用户手机号";
-        _nameField.textColor   = [UIColor blackColor];
-        _nameField.font        = [UIFont systemFontOfSize:18 weight:(UIFontWeightHeavy)];
-        _nameField.tintColor   = [UIColor orangeColor];
+        _nameField                    = [[UITextField alloc] init];
+        _nameField.delegate           = self;
+        _nameField.placeholder        = @"    请输入用户手机号";
+        _nameField.textColor          = [UIColor blackColor];
+        _nameField.font               = [UIFont systemFontOfSize:18 weight:(UIFontWeightHeavy)];
+        _nameField.tintColor          = [UIColor orangeColor];
         _nameField.layer.cornerRadius = 15;
-        _nameField.clipsToBounds = YES;
-        _nameField.keyboardType  =  UIKeyboardTypeNumberPad;
+        _nameField.clipsToBounds      = YES;
+        _nameField.keyboardType       =  UIKeyboardTypeNumberPad;
     }
     return _nameField;
 }
@@ -223,16 +223,15 @@ static LoginView * loginView = nil;
 {
     if (!_pwdField)
     {
-        _pwdField             = [[UITextField alloc] init];
-        _pwdField.delegate    = self;
-        _pwdField.placeholder = @"    请再次输入手机号";
-        _pwdField.textColor   = [UIColor blackColor];
-        _pwdField.font        = [UIFont systemFontOfSize:18 weight:(UIFontWeightHeavy)];
-        _pwdField.tintColor   = [UIColor orangeColor];
+        _pwdField                    = [[UITextField alloc] init];
+        _pwdField.delegate           = self;
+        _pwdField.placeholder        = @"    请再次输入手机号";
+        _pwdField.textColor          = [UIColor blackColor];
+        _pwdField.font               = [UIFont systemFontOfSize:18 weight:(UIFontWeightHeavy)];
+        _pwdField.tintColor          = [UIColor orangeColor];
         _pwdField.layer.cornerRadius = 15;
-        _pwdField.clipsToBounds = YES;
-        _pwdField.keyboardType  =  UIKeyboardTypeNumberPad;
-
+        _pwdField.clipsToBounds      = YES;
+        _pwdField.keyboardType       =  UIKeyboardTypeNumberPad;
 
     }
     return _pwdField;
