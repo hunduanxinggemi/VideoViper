@@ -66,7 +66,6 @@
     UINavigationController *home = [self createVCWithTitle:@"首页" icon:@"home" className:@"HLHomeViewController"];
     
     NSMutableArray *viewControllers = [NSMutableArray arrayWithArray:self.viewControllers];
-    
     [viewControllers replaceObjectAtIndex:0 withObject:home];
     self.viewControllers = viewControllers;
 }

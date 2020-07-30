@@ -1851,7 +1851,6 @@ BOOL AX_WEB_VIEW_CONTROLLER_iOS10_0_AVAILABLE() { return AX_WEB_VIEW_CONTROLLER_
         [self.navigationItem setLeftBarButtonItems:nil animated:NO];
     }
 }
-
 #define iPhone4s   SCREEN_HEIGHT==480.00
 #define iPhone5_5s SCREEN_HEIGHT==568.00
 #define iPhone6_6s SCREEN_HEIGHT==667.00
@@ -1891,7 +1890,7 @@ BOOL AX_WEB_VIEW_CONTROLLER_iOS10_0_AVAILABLE() { return AX_WEB_VIEW_CONTROLLER_
                                  @"http://www.yy6080.cn",
                                  @"http://www.yy3080.com/vod-type-id-1-pg-1.html/",
                                  @"http://www.sjzvip.cn/index.html",
-                                 @"https://www.dadatu.co/",
+                                 @"https://www.lestu.com",
                                  @"https://music.sonimei.cn/",
                                  @"http://www.071o.com",
                                  @"https://www.weisfx.com",

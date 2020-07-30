@@ -27,14 +27,10 @@
 
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:HLVideoIphoneUAisOn];
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"UserAgent": HLiPhoneUA}];
-
+    [[NSUserDefaults standardUserDefaults] setObject:@"2020/08/01" forKey:LoginDate];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     [Bugly startWithAppId:@"51511e6dc5"];
-    
-    [[NSUserDefaults standardUserDefaults] setObject:@"2020/07/10" forKey:LoginDate];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
     [VipURLManager sharedInstance];
     [[QSPDownloadTool shareInstance] startAllTask];
     
@@ -69,7 +65,8 @@
              NSLog(@"%@",[VipURLManager sharedInstance].vipArray);
          } else {
              // 网络访问失败
-             NSLog(@"error=%@",error);
+             [SVProgressHUD showErrorWithStatus:@"网络请求失败，无法获取服务器上的名单！"];
+             
          }
      }];
      

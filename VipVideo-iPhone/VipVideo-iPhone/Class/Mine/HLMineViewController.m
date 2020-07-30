@@ -117,7 +117,7 @@
         self.titleLabel.hidden = NO;
         self.headerImgV.hidden = NO;
         NSString * validate = [[NSUserDefaults standardUserDefaults] objectForKey:LoginDate];
-        self.titleLabel.text = [NSString stringWithFormat:@"您的会员截止日期为%@到期，为了不影响您的使用，请及时续费哦！",validate?validate:@"1990/01/01"];
+        self.titleLabel.text = [NSString stringWithFormat:@"您的会员截止日期为%@到期，为了不影响您的使用，请及时续费哦！",validate?validate:@"2020/08/01"];
     }else
     {
         self.loginBtn.hidden = NO;

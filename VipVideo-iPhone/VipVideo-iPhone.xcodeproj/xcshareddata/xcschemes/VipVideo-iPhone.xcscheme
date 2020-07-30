@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C7240A901FA174D3000684F1"
-               BuildableName = "VipVideo-iPhone.app"
+               BuildableName = "VipVideo.app"
                BlueprintName = "VipVideo-iPhone"
                ReferencedContainer = "container:VipVideo-iPhone.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C7240A901FA174D3000684F1"
-            BuildableName = "VipVideo-iPhone.app"
+            BuildableName = "VipVideo.app"
             BlueprintName = "VipVideo-iPhone"
             ReferencedContainer = "container:VipVideo-iPhone.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C7240A901FA174D3000684F1"
-            BuildableName = "VipVideo-iPhone.app"
+            BuildableName = "VipVideo.app"
             BlueprintName = "VipVideo-iPhone"
             ReferencedContainer = "container:VipVideo-iPhone.xcodeproj">
          </BuildableReference>
