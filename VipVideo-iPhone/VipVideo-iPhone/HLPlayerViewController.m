@@ -40,7 +40,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
     //获取设备旋转方向的通知,即使关闭了自动旋转,一样可以监测到设备的旋转方向
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 //    //旋转屏幕通知
@@ -135,8 +134,6 @@
     
     NSLog(@"屏幕需要旋转");
 }
-
-
 
 /** downloadBtn event */
 - (void)zf_playerDownload:(NSString *)url{

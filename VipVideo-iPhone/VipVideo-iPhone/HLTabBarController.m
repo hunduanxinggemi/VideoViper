@@ -8,7 +8,6 @@
 
 #import "HLTabBarController.h"
 #import "UIViewController+.h"
-
 #import "HLHomeViewController.h"
 #import "HLTVListViewController.h"
 #import "DownloadViewController.h"
@@ -44,7 +43,6 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     nav.tabBarItem.title = title;
     nav.tabBarItem.image = [UIImage imageNamed:icon];
-    
     return nav;
 }
 

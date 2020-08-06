@@ -2,7 +2,7 @@
 //  HLWebVideoViewController.h
 //  VipVideo-iPhone
 //
-//  Created by LHL on 2017/10/26.
+//  Creat  ed by LHL on 2017/10/26.
 //  Copyright © 2017年 SV. All rights reserved.
 //
 
@@ -16,7 +16,7 @@
 #import "HybridNSURLProtocol.h"
 
 
-@interface HLWebVideoViewController ()<UIGestureRecognizerDelegate>
+@interface HLWebVideoViewController ()<UIGestureRecognizerDelegate,UIScrollViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *modelsArray;
 
@@ -28,7 +28,7 @@
 @property (nonatomic, strong) UIButton       *leftButton;
 @property (nonatomic, strong) UIButton       *rightButton;
 //@property (nonatomic, strong) UIButton       *downloadButton;
-
+@property (nonatomic,assign)CGFloat  toolBarY;
 @end
 
 @implementation HLWebVideoViewController
@@ -39,10 +39,11 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
+    self.toolBarY = self.navigationController.toolbar.y;
+    self.webView.scrollView.delegate = self;
+
     if (!self.rightButton) {
         UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [rightButton setTitle:@"转换" forState:UIControlStateNormal];
         [rightButton setImage:[UIImage imageNamed:@"VIP"] forState:UIControlStateNormal];
         rightButton.titleLabel.font = [UIFont systemFontOfSize:14];
         rightButton.frame = CGRectMake(0, 0, 30, 44);
@@ -51,27 +52,36 @@
         self.rightButton = rightButton;
     }
     
-//    if (!self.downloadButton) {
-//        UIButton *downloadButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [downloadButton setTitle:@"下载" forState:UIControlStateNormal];
-//        downloadButton.titleLabel.font = [UIFont systemFontOfSize:14];
-//        downloadButton.frame = CGRectMake(0, 0, 30, 44);
-//        [downloadButton setTitleColor:self.view.tintColor forState:UIControlStateNormal];
-//        [downloadButton addTarget:self action:@selector(downloadClicked:) forControlEvents:UIControlEventTouchUpInside];
-//        self.downloadButton = downloadButton;
-//    }
-    
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
         self.navigationItem.leftBarButtonItems = @[
                                                    [[UIBarButtonItem alloc] initWithCustomView:self.leftButton],
-                                                   [[UIBarButtonItem alloc] initWithCustomView:self.rightButton]];
+                                                    [[UIBarButtonItem alloc] initWithCustomView:self.rightButton]];
     }
     else {
 //        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.leftButton];
         self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.rightButton],];
     }
-    
+}
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    __weak typeof(self) weakSelf = self;
+    if (scrollView.contentOffset.y+kScreenHeight == self.webView.scrollView.contentSize.height) {
+        if (!self.navigationController.toolbar.hidden) {
+            //弱引用
+            [UIView animateWithDuration:5 animations:^{
+                weakSelf.navigationController.toolbar.y      = kScreenHeight;
+                weakSelf.navigationController.toolbar.hidden = YES;
+            }];
+        }
+        return;
+    }
+    //弱引用
+    [UIView animateWithDuration:0.5 animations:^{
+        weakSelf.navigationController.toolbar.y      = self.toolBarY;
+        weakSelf.navigationController.toolbar.hidden = NO;
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -176,10 +186,10 @@ static bool isShow = NO;
 }
 
 - (void)delayOpreation{
-    HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
+    HLPlayerViewController *playerVC             = [[HLPlayerViewController alloc] init];
     [VipURLManager sharedInstance].currentPlayer = playerVC;
-    playerVC.url = self.currentVideoUrl;
-    playerVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    playerVC.url                                 = self.currentVideoUrl;
+    playerVC.modalPresentationStyle              = UIModalPresentationFullScreen;
     [self presentViewController:playerVC animated:YES completion:nil];
 }
 
