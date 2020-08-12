@@ -147,7 +147,7 @@
         videoNav.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:videoNav animated:YES completion:nil];
     }else{
-        [SVProgressHUD showErrorWithStatus:@"您还不是VIP用户或者VIP已经到期，暂时无法进行观影。请先购买（续费）会员资格。"];
+        [SVProgressHUD showImage:[UIImage imageNamed:@"bilibili"] status:VipAlertString];
         return;
     }
 }

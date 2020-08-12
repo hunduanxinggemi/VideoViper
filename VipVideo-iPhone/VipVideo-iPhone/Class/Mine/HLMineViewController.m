@@ -71,9 +71,8 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     isLogin = @"0";
     [self refreshMainUI:isLogin];
-    
-    
 }
+
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -90,7 +89,6 @@
     self.loginBtn.hidden   = NO;
     self.titleLabel.hidden = YES;
     self.headerImgV.hidden = YES;
-
 }
           
 -(void)loginAction:(UIButton *)btn{

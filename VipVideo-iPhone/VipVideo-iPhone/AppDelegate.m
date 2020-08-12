@@ -35,6 +35,9 @@
     [[QSPDownloadTool shareInstance] startAllTask];
     //向网络请求所有Vip的信息。用于进行判断本机用户是不是会员。
     [self initVipList];
+
+
+
     return YES;
 }
 

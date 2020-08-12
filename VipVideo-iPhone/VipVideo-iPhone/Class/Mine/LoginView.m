@@ -32,10 +32,16 @@
 
 @property (nonatomic,strong)UITapGestureRecognizer *  tap;
 
+@property (nonatomic,strong)UILongPressGestureRecognizer * longPress;
+
+
 /**
  descriptionLabel
  */
 @property (nonatomic,strong)UILabel *  descriptionLabel;
+
+//消失提示的label
+@property (nonatomic,strong)UILabel *  dismissLabel;
 
 @end
 
@@ -96,9 +102,19 @@ static LoginView * loginView = nil;
     [self.backView addSubview:self.pwdField];
     [self.backView addSubview:self.loginBtn];
     [self.backView addSubview:self.descriptionLabel];
+    [self.backView addSubview:self.dismissLabel];
     [self.loginBtn addTarget:self action:@selector(loginAction:) forControlEvents:(UIControlEventTouchUpInside)];
     self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+    self.longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressAction:)];
     [self.backView addGestureRecognizer:self.tap];
+    [self.backView addGestureRecognizer:self.longPress];
+}
+
+//长按手势响应方法
+-(void)longPressAction:(UILongPressGestureRecognizer *)longPress{
+    
+    [self dismiss];
+
 }
 
 -(void)tapAction:(UITapGestureRecognizer *)tap{
@@ -142,27 +158,44 @@ static LoginView * loginView = nil;
 
 -(void)setUIFrame{
     
-    self.titleLabel.size           = CGSizeMake(150, 30);
-    self.titleLabel.font           = [UIFont systemFontOfSize:29 weight:(UIFontWeightRegular)];
-    self.titleLabel.centerX        = kScreenWidth/2.0;
-    self.titleLabel.y              = 150;
-    self.centerX                   = kScreenWidth /2.0;
-    self.y                         = self.backView.sumHeight+20;
-    self.nameField.size            = CGSizeMake(kScreenWidth/3.0*2, 45);
-    self.nameField.y               = self.titleLabel.sumHeight+45;
-    self.nameField.backgroundColor = [UIColor cyanColor];
-    self.nameField.centerX         = kScreenWidth/2.0;
-    self.pwdField.size             = self.nameField.size;
-    self.pwdField.y                = self.nameField.sumHeight+15;
-    self.pwdField.backgroundColor  = [UIColor cyanColor];
-    self.pwdField.centerX          = self.nameField.centerX;
-    self.loginBtn.size             = CGSizeMake(180, 45);
-    self.loginBtn.backgroundColor  = [UIColor orangeColor];
-    self.loginBtn.y                = self.pwdField.sumHeight+55;
-    self.loginBtn.centerX          = self.nameField.centerX;
+    self.titleLabel.size            = CGSizeMake(150, 30);
+    self.titleLabel.font            = [UIFont systemFontOfSize:29 weight:(UIFontWeightRegular)];
+    self.titleLabel.centerX         = kScreenWidth/2.0;
+    self.titleLabel.y               = 150;
+    self.centerX                    = kScreenWidth /2.0;
+    self.y                          = self.backView.sumHeight+20;
+    self.nameField.size             = CGSizeMake(kScreenWidth/3.0*2, 45);
+    self.nameField.y                = self.titleLabel.sumHeight+45;
+    self.nameField.backgroundColor  = [UIColor cyanColor];
+    self.nameField.centerX          = kScreenWidth/2.0;
+    self.pwdField.size              = self.nameField.size;
+    self.pwdField.y                 = self.nameField.sumHeight+15;
+    self.pwdField.backgroundColor   = [UIColor cyanColor];
+    self.pwdField.centerX           = self.nameField.centerX;
+    self.loginBtn.size              = CGSizeMake(180, 45);
+    self.loginBtn.backgroundColor   = [UIColor orangeColor];
+    self.loginBtn.y                 = self.pwdField.sumHeight+40;
+    self.loginBtn.centerX           = self.nameField.centerX;
+    self.descriptionLabel.size      = CGSizeMake(kScreenWidth/3.0 * 2, 120);
+    self.descriptionLabel.centerX   = kScreenWidth/2.0;
+    self.descriptionLabel.y         = self.loginBtn.sumHeight + 20;
+    self.dismissLabel.size          = CGSizeMake(kScreenWidth-20, 40);
+    self.dismissLabel.centerX       = kScreenWidth/2.0;
+    self.dismissLabel.y             = self.descriptionLabel.sumHeight;
+    self.dismissLabel.font          = [UIFont systemFontOfSize:22 weight:(UIFontWeightBold)];
+    self.dismissLabel.numberOfLines = 0;
+    self.dismissLabel.text          = @"🙄长按退出登录页面哦!!!🙄";
+    self.dismissLabel.textColor     = [UIColor redColor];
+    self.dismissLabel.textAlignment = NSTextAlignmentCenter;
 }
 
-
+-(UILabel *)dismissLabel
+{
+    if (!_dismissLabel) {
+        _dismissLabel = [[UILabel alloc] init];
+    }
+    return _dismissLabel;
+}
 
 /**
  懒加载布局
@@ -181,7 +214,7 @@ static LoginView * loginView = nil;
 
 /**
  懒加载布局
- 所有的都可以改写
+ 所有的都可以改写 
  @return 布局
  */
 -(UILabel *)titleLabel
@@ -191,12 +224,12 @@ static LoginView * loginView = nil;
         _titleLabel               = [[UILabel alloc] init];
         _titleLabel.textColor     = [UIColor orangeColor];
         _titleLabel.font          = [UIFont systemFontOfSize:30 weight:(UIFontWeightHeavy)];
-        _titleLabel.text          = @"用户信息";
+        _titleLabel.text          = @"联系方式";
         _titleLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _titleLabel;
 }
-
+ 
 /**
  懒加载布局
  所有的都可以改写
@@ -266,11 +299,11 @@ static LoginView * loginView = nil;
 {
     if (!_descriptionLabel)
     {
-        _descriptionLabel = [[UILabel alloc] init];
-        _descriptionLabel.font = [UIFont systemFontOfSize:15 weight:(UIFontWeightThin)];
-        _descriptionLabel.textColor = [UIColor redColor];
+        _descriptionLabel               = [[UILabel alloc] init];
+        _descriptionLabel.font          = [UIFont systemFontOfSize:18 weight:(UIFontWeightThin)];
+        _descriptionLabel.textColor     = [UIColor cyanColor];
         _descriptionLabel.numberOfLines = 0;
-        _descriptionLabel.text = @"请慎重输入手机号，因为该号码是你vip唯一凭证的重要因素，并且已经提交后便不可再次修改。所以请确认无误后点击提交按钮";
+        _descriptionLabel.text          = @"请慎重输入手机号，因为该号码是你vip唯一凭证的重要因素，并且已经提交后便不可再次修改。所以请确认无误后点击提交按钮";
     }
     return _descriptionLabel;
 }

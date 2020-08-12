@@ -147,7 +147,6 @@
     }
 }
 
-
 - (void)downloadSource:(QSPDownloadSource *)source changedStyle:(QSPDownloadSourceStyle)style{
     if (style == QSPDownloadSourceStyleFail) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"下载失败" message:nil preferredStyle:UIAlertControllerStyleAlert];
@@ -167,7 +166,7 @@
 
 /** 控制层即将显示 */
 - (void)zf_playerControlViewWillShow:(UIView *)controlView isFullscreen:(BOOL)fullscreen{
-    
+    NSLog(@"");
 }
 
 /** 控制层即将隐藏 */

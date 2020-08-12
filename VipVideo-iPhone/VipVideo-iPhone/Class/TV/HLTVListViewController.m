@@ -211,7 +211,7 @@
     NSString * userPhone = [[NSUserDefaults standardUserDefaults] objectForKey:MyPhone];
     NSArray * phoneArr = [VipURLManager sharedInstance].phoneArray;
     if (![phoneArr containsObject:userPhone] || ![LoginModel checkVipDate]) {
-        [SVProgressHUD showErrorWithStatus:@"您还不是VIP用户或者VIP已经到期，暂时无法进行观影。请先购买（续费）会员资格。"];
+        [SVProgressHUD showImage:[UIImage imageNamed:@"Video_normal.jpeg"] status:VipAlertString];
         return;
     }
     if (indexPath.row < [self.dataSource count]) {
@@ -223,8 +223,6 @@
             [self autoPlayNextVideo:indexPath delegate:self];
             return;
         }
-
-        
         if (![tableView.visibleCells containsObject:cell]) {
             if ((indexPath.row+2) < [self.dataSource count]) {
                 [tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:(indexPath.row+2) inSection:indexPath.section] atScrollPosition:UITableViewScrollPositionNone animated:YES];
