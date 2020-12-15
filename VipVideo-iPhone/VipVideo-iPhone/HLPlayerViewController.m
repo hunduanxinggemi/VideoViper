@@ -13,15 +13,14 @@
 
 @interface HLPlayerViewController () <WMPlayerDelegate>
 
-@property (nonatomic, strong) WMPlayer *  wmPlayer;
-@property (nonatomic, strong) HTTPServer *server;
+@property (nonatomic, strong)WMPlayer *wmPlayer;
+@property (nonatomic, strong)HTTPServer*server;
 
 @end
 
 @implementation HLPlayerViewController
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil
-                         bundle:(NSBundle *)nibBundleOrNil {
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         self.canDownload = YES;
     }
