@@ -21,6 +21,7 @@ PODS:
   - FTPopOverMenu (2.1.1)
   - HLAdditions (1.0.4)
   - Masonry (1.1.0)
+  - MJRefresh (3.5.0)
   - NJKWebViewProgress (0.2.3):
     - NJKWebViewProgress/Core (= 0.2.3)
     - NJKWebViewProgress/ProgressView (= 0.2.3)
@@ -36,10 +37,11 @@ DEPENDENCIES:
   - FTPopOverMenu
   - HLAdditions
   - Masonry
+  - MJRefresh
   - SVProgressHUD
 
 SPEC REPOS:
-  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+  trunk:
     - Aspects
     - AXIndicatorView
     - AXNavigationBackItemInjection
@@ -53,6 +55,7 @@ SPEC REPOS:
     - FTPopOverMenu
     - HLAdditions
     - Masonry
+    - MJRefresh
     - NJKWebViewProgress
     - SVProgressHUD
 
@@ -70,9 +73,10 @@ SPEC CHECKSUMS:
   FTPopOverMenu: 202d46aea0656307fd463fac0340c9c8837158d2
   HLAdditions: 611544862c3c85a2c77f165b3e426391e1cbddf0
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 70900a453dae4edb7daca01d1cd63237a37961fd
+PODFILE CHECKSUM: 14cffa66186222d768c08873f5555ce78fc1a774
 
 COCOAPODS: 1.9.3

@@ -31,5 +31,6 @@
 #import "UIView+Frame.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "LoginModel.h"
+#import "VipListModel.h"
 
 #endif /* PrefixHeader_pch */

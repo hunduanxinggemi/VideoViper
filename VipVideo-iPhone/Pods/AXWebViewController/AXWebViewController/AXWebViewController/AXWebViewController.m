@@ -1880,6 +1880,7 @@ BOOL AX_WEB_VIEW_CONTROLLER_iOS10_0_AVAILABLE() { return AX_WEB_VIEW_CONTROLLER_
             NSArray * urlArr = @[@"https://iqiyi.com/",
                                  @"https://v.qq.com/",
                                  @"https://www.bilibili.com/",
+                                 @"https://www.pianku.tv",
                                  @"http://www.52gaoqing.com",
                                  @"https://www.mgtv.com/",
                                  @"https://www.youku.com/",

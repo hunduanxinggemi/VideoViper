@@ -9,115 +9,123 @@
 #import "DownloadViewController.h"
 #import "DownLoadCell.h"
 #import "FinishedViewController.h"
-#import "UIViewController+.h"
 #import "HLPlayerViewController.h"
 #import "UIScrollView+EmptyDataSet.h"
+#import "UIViewController+.h"
 
-@interface DownloadViewController ()<UITableViewDataSource, UITableViewDelegate, QSPDownloadToolDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
+@interface DownloadViewController () <UITableViewDataSource,
+                                      UITableViewDelegate,
+                                      QSPDownloadToolDelegate,
+                                      DZNEmptyDataSetSource,
+                                      DZNEmptyDataSetDelegate>
 
 @property (strong, nonatomic) NSMutableArray *dataArr;
-@property (strong, nonatomic) UILabel *emptyLabel;
+@property (strong, nonatomic) UILabel *       emptyLabel;
 
 @end
 
 @implementation DownloadViewController
 
-- (NSMutableArray *)dataArr
-{
+- (NSMutableArray *)dataArr {
     if (_dataArr == nil) {
         _dataArr = [NSMutableArray array];
     }
-    
+
     return _dataArr;
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     NSLog(@"%@ 销毁啦！", NSStringFromClass([self class]));
     [[QSPDownloadTool shareInstance] removeDownloadToolDelegate:self];
 }
 
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [_dataArr removeAllObjects];
-    [_dataArr addObjectsFromArray:[QSPDownloadTool shareInstance].downloadSources];
+    [_dataArr
+        addObjectsFromArray:[QSPDownloadTool shareInstance].downloadSources];
     [self.tableView reloadData];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.title = @"下载";
-    
+
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:@"已完成" forState:UIControlStateNormal];
     [button setTitleColor:self.view.tintColor forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:15];
-    [button addTarget:self action:@selector(pushFinishedVC:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self
+                  action:@selector(pushFinishedVC:)
+        forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
     [self.navigationItem setRightBarButtonItem:item];
-    
+
     [[QSPDownloadTool shareInstance] addDownloadToolDelegate:self];
-    
-    self.tableView.emptyDataSetSource = self;
+
+    self.tableView.emptyDataSetSource   = self;
     self.tableView.emptyDataSetDelegate = self;
-    
+
     // A little trick for removing the cell separators
     self.tableView.tableFooterView = [UIView new];
-    
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStyleDone target:self action:@selector(back)];
+
+    self.navigationItem.backBarButtonItem =
+        [[UIBarButtonItem alloc] initWithTitle:nil
+                                         style:UIBarButtonItemStyleDone
+                                        target:self
+                                        action:@selector(back)];
 }
 
-- (void)back{}
+- (void)back {
+}
 
-- (void)pushFinishedVC:(UIButton *)sender{
-    FinishedViewController *finishVC = [[FinishedViewController alloc] init];
+- (void)pushFinishedVC:(UIButton *)sender {
+    FinishedViewController *finishVC  = [[FinishedViewController alloc] init];
     finishVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:finishVC animated:YES];
 }
 
 #pragma mark -
 
-- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
-{
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
     return [UIImage imageNamed:@"empty_placeholder"];
 }
 
 #pragma mark - <UITableViewDataSource, UITableViewDelegate>代理方法
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section {
     if (self.dataArr.count > 0) {
         [_emptyLabel removeFromSuperview];
-    }
-    else {
+    } else {
         [self.view addSubview:self.emptyLabel];
     }
     return self.dataArr.count;
 }
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"DownLoadCell";
-    DownLoadCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    
+    DownLoadCell *   cell =
+        [tableView dequeueReusableCellWithIdentifier:identifier];
+
     if (cell == nil) {
-        cell = [[DownLoadCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[DownLoadCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                   reuseIdentifier:identifier];
     }
 
     __weak NSIndexPath *weakIndexPath = indexPath;
-    __weak  typeof(self) weakSelf = self;
-    cell.longBlock = ^{
-        NSIndexPath *strongIndexPath = weakIndexPath;
+    __weak typeof(self) weakSelf      = self;
+    cell.longBlock                    = ^{
+        NSIndexPath *strongIndexPath     = weakIndexPath;
         __strong typeof(self) strongSelf = weakSelf;
 
         QSPDownloadSource *source = strongSelf.dataArr[strongIndexPath.row];
-        
-        HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
+
+        HLPlayerViewController *playerVC =
+            [[HLPlayerViewController alloc] init];
         [VipURLManager sharedInstance].currentPlayer = playerVC;
-        playerVC.url = [NSURL fileURLWithPath:source.netPath];
+        playerVC.url         = [NSURL fileURLWithPath:source.netPath];
         playerVC.canDownload = NO;
         playerVC.modalPresentationStyle = UIModalPresentationFullScreen;
 
@@ -125,66 +133,73 @@
     };
 
     cell.source = self.dataArr[indexPath.row];
-    
+
     return cell;
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView
+    didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (![[UIViewController topViewController] isKindOfClass:[HLPlayerViewController class]]) {
+
+    if (![[UIViewController topViewController]
+            isKindOfClass:[HLPlayerViewController class]]) {
         QSPDownloadSource *source = self.dataArr[indexPath.row];
-        
-        HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
+
+        HLPlayerViewController *playerVC =
+            [[HLPlayerViewController alloc] init];
         [VipURLManager sharedInstance].currentPlayer = playerVC;
-        playerVC.url = [NSURL fileURLWithPath:source.location];
-        playerVC.canDownload = NO;
+        playerVC.url                                 = [NSURL
+            fileURLWithPath:source.location ? source.location : source.netPath];
+        playerVC.canDownload            = NO;
         playerVC.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:playerVC animated:YES completion:nil];
     }
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView
+    heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return DownLoadCell_Height;
 }
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (BOOL)tableView:(UITableView *)tableView
+    canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
-- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (NSString *)tableView:(UITableView *)tableView
+    titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
     return @"删除";
 }
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView
+    commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+     forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [[QSPDownloadTool shareInstance] stopDownload:self.dataArr[indexPath.row]];
+        [[QSPDownloadTool shareInstance]
+            stopDownload:self.dataArr[indexPath.row]];
         [self.dataArr removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
+        [tableView deleteRowsAtIndexPaths:@[ indexPath ]
+                         withRowAnimation:UITableViewRowAnimationMiddle];
     }
 }
 
 #pragma mark - <QSPDownloadToolDelegate>代理方法
-- (void)downloadToolDidFinish:(QSPDownloadTool *)tool downloadSource:(QSPDownloadSource *)source
-{
+- (void)downloadToolDidFinish:(QSPDownloadTool *)tool
+               downloadSource:(QSPDownloadSource *)source {
     for (int index = 0; index < self.dataArr.count; index++) {
         QSPDownloadSource *currentSource = self.dataArr[index];
         if (currentSource.task == source.task) {
             [self.dataArr removeObject:currentSource];
-            [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationMiddle];
+            [self.tableView deleteRowsAtIndexPaths:@[
+                [NSIndexPath indexPathForRow:index inSection:0]
+            ] withRowAnimation:UITableViewRowAnimationMiddle];
         }
     }
-    
 }
 
 #pragma mark -
 
-- (UILabel *)emptyLabel{
+- (UILabel *)emptyLabel {
     if (!_emptyLabel) {
-        _emptyLabel = [[UILabel alloc] initWithFrame:self.view.bounds];
+        _emptyLabel      = [[UILabel alloc] initWithFrame:self.view.bounds];
         _emptyLabel.text = @"暂无数据";
         _emptyLabel.textAlignment = NSTextAlignmentCenter;
-        _emptyLabel.textColor = [UIColor grayColor];
+        _emptyLabel.textColor     = [UIColor grayColor];
     }
     return _emptyLabel;
 }

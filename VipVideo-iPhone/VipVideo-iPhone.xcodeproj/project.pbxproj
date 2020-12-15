@@ -55,6 +55,7 @@
 		4FB74BAC21CE868A00F52070 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4FB74BAB21CE868A00F52070 /* README.md */; };
 		4FD3887121E991E100D1A3C0 /* HLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD3887021E991E100D1A3C0 /* HLHomeViewController.m */; };
 		76DEAA7C9C5E1A2B61BBB23F /* Pods_VipVideo_iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58AF90FD77A4432F7B8B36CA /* Pods_VipVideo_iPhone.framework */; };
+		A79739CB2502110E00654578 /* VipListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A79739CA2502110E00654578 /* VipListModel.m */; };
 		C70B57A62112AC200024D60B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579C2112AC200024D60B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C70B57A72112AC200024D60B /* VipURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579D2112AC200024D60B /* VipURLManager.m */; };
 		C70B57A82112AC200024D60B /* HybridNSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57A02112AC200024D60B /* HybridNSURLProtocol.m */; };
@@ -187,6 +188,8 @@
 		4FD3886F21E991E100D1A3C0 /* HLHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLHomeViewController.h; sourceTree = "<group>"; };
 		4FD3887021E991E100D1A3C0 /* HLHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLHomeViewController.m; sourceTree = "<group>"; };
 		58AF90FD77A4432F7B8B36CA /* Pods_VipVideo_iPhone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VipVideo_iPhone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79739C92502110E00654578 /* VipListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VipListModel.h; sourceTree = "<group>"; };
+		A79739CA2502110E00654578 /* VipListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VipListModel.m; sourceTree = "<group>"; };
 		C70B579B2112AC200024D60B /* VipURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipURLManager.h; sourceTree = "<group>"; };
 		C70B579C2112AC200024D60B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		C70B579D2112AC200024D60B /* VipURLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VipURLManager.m; sourceTree = "<group>"; };
@@ -376,6 +379,8 @@
 				C70B579B2112AC200024D60B /* VipURLManager.h */,
 				C70B579D2112AC200024D60B /* VipURLManager.m */,
 				C70B579F2112AC200024D60B /* NSURLProtocol */,
+				A79739C92502110E00654578 /* VipListModel.h */,
+				A79739CA2502110E00654578 /* VipListModel.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -626,6 +631,7 @@
 				TargetAttributes = {
 					C7240A901FA174D3000684F1 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -781,6 +787,7 @@
 				C70B57A82112AC200024D60B /* HybridNSURLProtocol.m in Sources */,
 				433D8556248F670100EEB3DA /* PinyinFormatter.m in Sources */,
 				433D8553248F670100EEB3DA /* ChineseInclude.m in Sources */,
+				A79739CB2502110E00654578 /* VipListModel.m in Sources */,
 				C72EE479214F51ED00288C1C /* DownloadViewController.m in Sources */,
 				433D8555248F670100EEB3DA /* ChineseToPinyinResource.m in Sources */,
 				C72EE47E214F51ED00288C1C /* HLTVListViewController.m in Sources */,
@@ -940,11 +947,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 374B924D2BF783FA18A84027 /* Pods-VipVideo-iPhone.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = 9XD4LNV4JH;
+				DEVELOPMENT_TEAM = JQA4R49ZNT;
 				GCC_PREFIX_HEADER = "VipVideo-iPhone/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -953,10 +961,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dhr.Test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jifenqi.hr3;
 				PRODUCT_NAME = VipVideo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -966,11 +976,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3FFBABEA1A43DE0B38ED6A63 /* Pods-VipVideo-iPhone.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development: 1518591503@qq.com (3KN436HBW7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = 3B7CR825BY;
+				DEVELOPMENT_TEAM = JQA4R49ZNT;
 				GCC_PREFIX_HEADER = "VipVideo-iPhone/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -979,10 +990,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dhr.viper2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jifenqi.hr3;
 				PRODUCT_NAME = VipVideo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 			};

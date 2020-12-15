@@ -48,31 +48,21 @@
             "url": "https://www.le.com/"
         },
         {
+            "name": "高清片库",
+            "icon": "周星驰.jpg",
+            "canvip": 1,
+            "url": "https://www.pianku.tv"
+        },
+        {
             "name": "31",
             "icon": "4084@2x.png",
             "canvip": 1,
             "url": "https://m.31bz.com/index.html"
         },
         {
-            "name": "6080",
-            "icon": "4084@2x.png",
-            "canvip": 10,
-            "url": "http://www.yy6080.cn"
-        },
-        {
-            "name": "新视觉影院",
-            "icon": "新视觉影院",
-            "url": "http://www.yy3080.com/vod-type-id-1-pg-1.html/"
-        },
-        {
             "name": "达达兔",
             "icon": "周星驰.jpg",
             "url": "https://www.lestu.com"
-        },
-        {
-            "name": "27TV",
-            "icon": "周星驰.jpg",
-            "url": "www.27tvs.com"
         },
         {
             "name": "YHDM",
@@ -85,11 +75,6 @@
             "url": "http://qshdy.com"
         },
         {
-            "name": "U5ZZ",
-            "icon": "周星驰.jpg",
-            "url": "http://u5zz.com/pc/#/main/1"
-        },
-        {
             "name": "音乐破解",
             "icon": "网易音乐.jpg",
             "url": "https://music.sonimei.cn/"
@@ -100,11 +85,6 @@
            "url":  "http://www.071o.com"
         },
         {
-           "name": "VIP影视",
-           "icon": "周星驰.jpg",
-           "url":  "https://www.weisfx.com"
-        },
-        {
            "name": "美剧",
            "icon": "国外电影.jpg",
            "url":  "https://www.meijutt.tv"
@@ -113,16 +93,6 @@
            "name": "美剧1",
            "icon": "国外电影.jpg",
            "url":  "https://91mjw.com/all"
-        },
-        {
-           "name": "美剧2",
-           "icon": "国外电影.jpg",
-           "url":  "https://www.jjmeiju.com"
-        },
-        {
-           "name": "美剧3",
-           "icon": "国外电影.jpg",
-           "url":  "http://www.5nj.com/?m=vod-type-id-8.html"
         },
         {
            "name": "精选电影",
