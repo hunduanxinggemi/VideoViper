@@ -25,6 +25,7 @@
     
     [[OOMDetector getInstance] setupWithDefaultConfig];
     NSLog(@"这个新分支才有的代,顺带添加一些功能需求");
+    NSLog(@"继续添加需求功能代码");
     [NSURLProtocol wk_registerScheme:@"http"];
     [NSURLProtocol wk_registerScheme:@"https"];
 
