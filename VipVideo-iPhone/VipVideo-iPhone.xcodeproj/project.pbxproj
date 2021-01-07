@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,6 +56,7 @@
 		4FD3887121E991E100D1A3C0 /* HLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD3887021E991E100D1A3C0 /* HLHomeViewController.m */; };
 		76DEAA7C9C5E1A2B61BBB23F /* Pods_VipVideo_iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58AF90FD77A4432F7B8B36CA /* Pods_VipVideo_iPhone.framework */; };
 		A79739CB2502110E00654578 /* VipListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A79739CA2502110E00654578 /* VipListModel.m */; };
+		A79FD1E82589D01500BDE3C1 /* ShowMemeryTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A79FD1E72589D01500BDE3C1 /* ShowMemeryTool.m */; };
 		C70B57A62112AC200024D60B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579C2112AC200024D60B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C70B57A72112AC200024D60B /* VipURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579D2112AC200024D60B /* VipURLManager.m */; };
 		C70B57A82112AC200024D60B /* HybridNSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57A02112AC200024D60B /* HybridNSURLProtocol.m */; };
@@ -190,6 +191,8 @@
 		58AF90FD77A4432F7B8B36CA /* Pods_VipVideo_iPhone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VipVideo_iPhone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79739C92502110E00654578 /* VipListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VipListModel.h; sourceTree = "<group>"; };
 		A79739CA2502110E00654578 /* VipListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VipListModel.m; sourceTree = "<group>"; };
+		A79FD1E62589D01500BDE3C1 /* ShowMemeryTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowMemeryTool.h; sourceTree = "<group>"; };
+		A79FD1E72589D01500BDE3C1 /* ShowMemeryTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowMemeryTool.m; sourceTree = "<group>"; };
 		C70B579B2112AC200024D60B /* VipURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipURLManager.h; sourceTree = "<group>"; };
 		C70B579C2112AC200024D60B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		C70B579D2112AC200024D60B /* VipURLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VipURLManager.m; sourceTree = "<group>"; };
@@ -445,6 +448,8 @@
 				4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */,
 				435FC2A424A1929B00204DA2 /* UIView+Frame.h */,
 				435FC2A524A1929B00204DA2 /* UIView+Frame.m */,
+				A79FD1E62589D01500BDE3C1 /* ShowMemeryTool.h */,
+				A79FD1E72589D01500BDE3C1 /* ShowMemeryTool.m */,
 				4F526038220309CE0028DB62 /* Addtations */,
 				C72EE44C214F51ED00288C1C /* Class */,
 				C70B579A2112AC200024D60B /* Data */,
@@ -632,6 +637,7 @@
 					C7240A901FA174D3000684F1 = {
 						CreatedOnToolsVersion = 9.0.1;
 						LastSwiftMigration = 1130;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -743,12 +749,45 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AXIndicatorView/AXIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/AXNavigationBackItemInjection/AXNavigationBackItemInjection.framework",
+				"${BUILT_PRODUCTS_DIR}/AXPracticalHUD/AXPracticalHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/AXWebViewController/AXWebViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaHTTPServer/CocoaHTTPServer.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/FTPopOverMenu/FTPopOverMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/HLAdditions/HLAdditions.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/NJKWebViewProgress/NJKWebViewProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/OOMDetector/OOMDetector.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/fishhook/fishhook.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AXIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AXNavigationBackItemInjection.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AXPracticalHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AXWebViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaHTTPServer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTPopOverMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HLAdditions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NJKWebViewProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OOMDetector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fishhook.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -795,6 +834,7 @@
 				C72EE477214F51ED00288C1C /* WMPlayer.m in Sources */,
 				4FD3887121E991E100D1A3C0 /* HLHomeViewController.m in Sources */,
 				C7240A961FA174D3000684F1 /* AppDelegate.m in Sources */,
+				A79FD1E82589D01500BDE3C1 /* ShowMemeryTool.m in Sources */,
 				C72EE487214F530000288C1C /* HLMineViewController.m in Sources */,
 				433D8558248F670100EEB3DA /* SearchTool.m in Sources */,
 				4F52603C220309CE0028DB62 /* BHBNetworkSpeed.m in Sources */,
@@ -952,16 +992,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = JQA4R49ZNT;
+				DEVELOPMENT_TEAM = 5ZS88AX5DM;
 				GCC_PREFIX_HEADER = "VipVideo-iPhone/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jifenqi.hr3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.winning.MobileDoctor;
 				PRODUCT_NAME = VipVideo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
@@ -977,20 +1014,17 @@
 			baseConfigurationReference = 3FFBABEA1A43DE0B38ED6A63 /* Pods-VipVideo-iPhone.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development: 1518591503@qq.com (3KN436HBW7)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = JQA4R49ZNT;
+				DEVELOPMENT_TEAM = 5ZS88AX5DM;
 				GCC_PREFIX_HEADER = "VipVideo-iPhone/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jifenqi.hr3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.winning.MobileDoctor;
 				PRODUCT_NAME = VipVideo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;

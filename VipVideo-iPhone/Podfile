@@ -15,4 +15,5 @@ target 'VipVideo-iPhone' do
   pod 'Bugly'
   pod 'SVProgressHUD'
   pod 'MJRefresh'
+  pod 'OOMDetector'
 end

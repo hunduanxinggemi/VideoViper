@@ -11,6 +11,7 @@
 #import "Masonry.h"
 #import "VipURLManager.h"
 #import <MJRefresh/MJRefresh.h>
+#import "ShowMemeryTool.h"
 
 @interface HLHomeCollectionViewCell : UICollectionViewCell
 
@@ -55,6 +56,7 @@
         make.top.equalTo(self.iconImageView.mas_bottom).offset(5);
         make.height.mas_equalTo(17);
     }];
+    
 }
 
 - (void)setObject:(VipUrlItem *)object {
@@ -76,7 +78,10 @@
 @interface HLHomeViewController ()
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
-
+/**
+ <#Description#>
+ */
+@property (nonatomic,strong)UILabel * memeryLabel;
 @end
 
 @implementation HLHomeViewController
@@ -129,6 +134,9 @@
 
         }];
     self.collectionView.mj_header = headerView;
+    
+    [[[UIApplication sharedApplication] keyWindow] addSubview:self.memeryLabel];
+    self.memeryLabel.text  = [NSString stringWithFormat:@"当前使用内存：%ldMB",[ShowMemeryTool useMemoryForApp]];
 }
 
 //默认是不支持旋转页面适配的
@@ -195,4 +203,21 @@
     }
 }
 
+/**
+ 懒加载布局
+ 所有的都可以改写
+ @return <#(nonnull NSString *)#>布局
+ */
+-(UILabel *)memeryLabel
+{
+    if (!_memeryLabel){
+        
+        _memeryLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 200, 40)];
+        _memeryLabel.font  = [UIFont systemFontOfSize:18];
+        _memeryLabel.textColor  = [UIColor whiteColor];
+        _memeryLabel.backgroundColor = [UIColor blackColor];
+        _memeryLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _memeryLabel;
+}
 @end

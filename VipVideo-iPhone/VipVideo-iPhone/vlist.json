@@ -147,7 +147,10 @@
     ],
     
     "list": [
-      
+      {
+        "name":"油头",
+        "url":"http://avip.fun/tv?utm_source=github"
+      },
         {
             "name": "2020电视剧",
             "url": "http://www.bavei.com/vip/?url="

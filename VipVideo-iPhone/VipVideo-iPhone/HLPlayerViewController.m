@@ -13,8 +13,8 @@
 
 @interface HLPlayerViewController () <WMPlayerDelegate>
 
-@property(nonatomic, strong)WMPlayer *wmPlayer;
-@property(nonatomic, strong)HTTPServer*server;
+@property(nonatomic, strong) WMPlayer * wmPlayer;
+@property(nonatomic, strong) HTTPServer * server;
 
 @end
 

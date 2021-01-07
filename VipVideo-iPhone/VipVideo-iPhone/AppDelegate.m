@@ -11,6 +11,7 @@
 #import "QSPDownloadTool.h"
 #import "VipURLManager.h"
 #import <Bugly/Bugly.h>
+#import <OOMDetector.h>
 
 @interface AppDelegate ()
 
@@ -21,7 +22,9 @@
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-
+    
+    [[OOMDetector getInstance] setupWithDefaultConfig];
+    
     [NSURLProtocol wk_registerScheme:@"http"];
     [NSURLProtocol wk_registerScheme:@"https"];
 
