@@ -24,6 +24,7 @@
     // Override point for customization after application launch.
     
     [[OOMDetector getInstance] setupWithDefaultConfig];
+    NSLog(@"这个新分支才有的代码");
     [NSURLProtocol wk_registerScheme:@"http"];
     [NSURLProtocol wk_registerScheme:@"https"];
 
