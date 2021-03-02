@@ -54,12 +54,6 @@
             "url": "https://www.pianku.tv"
         },
         {
-            "name": "31",
-            "icon": "4084@2x.png",
-            "canvip": 1,
-            "url": "https://m.31bz.com/index.html"
-        },
-        {
             "name": "达达兔",
             "icon": "周星驰.jpg",
             "url": "https://www.lestu.com"
@@ -68,16 +62,6 @@
             "name": "YHDM",
             "icon": "周星驰.jpg",
             "url": "http://yhdm66.com/dy/index.html"
-        },
-        {
-            "name": "QSDY",
-            "icon": "周星驰.jpg",
-            "url": "http://qshdy.com"
-        },
-        {
-            "name": "音乐破解",
-            "icon": "网易音乐.jpg",
-            "url": "https://music.sonimei.cn/"
         },
         {
            "name": "百灵鸟",
@@ -114,25 +98,11 @@
             "icon": "张大仙.jpeg",
             "url": "https://www.huya.com/688"
         },
-        {
-            "name": "Faker",
-            "icon": "Faker.jpg",
-            "url": "https://www.douyu.com/1691127"
-        },
+
         {
            "name": "经典电影",
            "icon": "Video_normal.jpeg",
            "url": "https://www.huya.com/qndyg"
-        },
-        {
-            "name": "精选电影",
-            "icon": "Video_normal.jpeg",
-            "url": "https://www.douyu.com/6763930"
-        },
-        {
-           "name": "马东锡",
-           "icon": "马东锡.jpg",
-           "url": "https://www.huya.com/16144175"
         },
         {
            "name": "国外电影",
@@ -143,171 +113,52 @@
            "name": "甄子丹",
            "icon": "甄子丹.jpg",
            "url": "https://www.huya.com/11352935"
-        }
+        },
+        {
+            "name": "黑料正能量",
+            "icon": "高圆圆.jpg",
+            "url": "https://www.ccwk888.top"
+        },
     ],
     
     "list": [
-      {
-        "name":"油头",
-        "url":"http://avip.fun/tv?utm_source=github"
-      },
         {
-            "name": "2020电视剧",
-            "url": "http://www.bavei.com/vip/?url="
+            "name":"油头",
+            "url":"http://avip.fun/tv?utm_source=github"
         },
         {
            "name": "搜索影片",
            "url": "http://z1.m1907.cn/?jx="
         },
         {
-          "name": "1223-1",
-          "url": "http://v.d9y.net/vip/?url="
+            "name": "最新vip-1",
+            "url": "http://v.d9y.net/vip/?url="
         },
         {
-          "name": "1223-2",
-          "url": "http://mimijiexi.top/?url="
+            "name": "最新vip-2",
+            "url": "http://mimijiexi.top/?url="
         },
         {
-          "name": "1223-3",
-          "url": "http://55jx.top/?url="
+            "name": "最新vip-3",
+            "url": "http://55jx.top/?url="
         },
         {
-          "name": "1223-6",
-          "url": "http://19g.top/?url="
+            "name": "最新vip-4",
+            "url": "http://playx.top/?url="
         },
         {
-           "name": "688—2020",
-           "url": "http://jx.688ing.com/?search="
-        },
-        {
-           "name": "推荐",
-           "url": "http://jx.618g.com/?url="
-        },
-        {
-           "name": "99yw速度",
-           "url": "https://jx.99yyw.com/99/?url="
-        },
-        {
-           "name": "万能线路",
-           "url": "http://okjx.cc/?url="
-        },
-        {
-           "name":"万能线路2",
-           "url":"https://j.wfss100.com/?url="
-        },
-        {
-           "name":"万能线路3",
-           "url":"https://vip.bljiex.com/?v="
-        },
-        {
-           "name": "直播直播接口",
-           "url": "https://vip.fxw.la/m3u8/index.php?url="
-        },
-        {
-           "name": "52接口",
-           "url": "http://jx.52damu.com/?url="
-        },
-        {
-           "name": "660e接口",
-           "url": "http://660e.com/?url="
-        },
-        {
-           "name":"",
-           "url":"https://660e.com/?url="
-        },
-        {
-           "name": "速度",
-           "url": "http://www.8090g.cn/?url="
-        },
-        {
-           "name": "略慢",
-           "url": "http://jx.52damu.com/dmjx/jiexi.php?url="
-        },
-        {
-           "name": "略慢2",
-           "url": "http://cn.bjbanshan.cn/jiexi.php?url="
-        },
-        {
-           "name": "慢慢1",
-           "url": "http://jx.ejiafarm.com/yun.php?url=     "
-        },
-             
-        {
-           "name": "慢慢2",
-           "url": "http://cn.bjbanshan.cn/jiexi.php?url= "
-        },
-        {
-           "name": "慢慢3",
-           "url": "https://www.1717yun.com/jx/ty.php?url="
-        },
-        {
-           "name": "慢系列",
-           "url": "http://jx.1ff1.cn/?url= "
-        },
-     
-        {
-           "name":"略慢系列",
-           "url":"http://www.33tn.cn/?url="
-        },
-        {
-            "name": "1223-5较慢",
+            "name": "最新vip-5",
             "url": "http://nitian9.com/?url="
         },
         {
-            "name": "5月-21慢",
-            "url": "http://jiexi.071811.cc/jx2.php?url="
+            "name": "最新vip-6",
+            "url": "http://19g.top/?url="
         },
         {
-            "name": "9月-2",
-            "url": "http://jqaaa.com/jx.php?url="
-        },
-        {
-            "name": "速度一般",
-            "url": "http://beaacc.com/api.php?url="
-        },
-        {
-            "name": "速度一般",
-            "url": "http://www.82190555.com/index.php?url="
-        },
-        {
-            "name":"较慢",
-            "url":"http://www.85105052.com/admin.php?url="
+            "name": "最新vip-7",
+            "url": "http://52088.online/?url="
         },
 
-        {
-            "name": "慢",
-            "url": "https://yooomm.com/index.php?url="
-        },
-        {
-            "name": "较慢",
-            "url": "http://www.82190555.com/index/qqvod.php?url="
-        },
-        {
-            "name":"较慢",
-            "url":"http://17kyun.com/api.php?url="
-        },
-  
-        {
-            "name": "5月-1",
-            "url": "http://www.82190555.com/index/qqvod.php?url="
-        },
-        {
-            "name": "花园影视（可能无效）",
-            "url": "http://j.zz22x.com/jx/?url="
-        },
-
-        {
-           "name":"较慢",
-           "url":"http://tv.x-99.cn/api/wnapi.php?id="
-        },
-        {
-          "name":"爱跟影院",
-          "url":"http://2gty.com/apiurl/yun.php?url="
-        },
-        {
-            "name": "白雨较慢",
-            "url": "http://api.baiyug.vip/index.php?url="
-        },
        
     ]
 }

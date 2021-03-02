@@ -57,6 +57,8 @@
 		76DEAA7C9C5E1A2B61BBB23F /* Pods_VipVideo_iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58AF90FD77A4432F7B8B36CA /* Pods_VipVideo_iPhone.framework */; };
 		A79739CB2502110E00654578 /* VipListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A79739CA2502110E00654578 /* VipListModel.m */; };
 		A79FD1E82589D01500BDE3C1 /* ShowMemeryTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A79FD1E72589D01500BDE3C1 /* ShowMemeryTool.m */; };
+		A7CD45E025D282300014EC51 /* 高圆圆.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7CD45DF25D282300014EC51 /* 高圆圆.jpg */; };
+		A7CD45E325D902D50014EC51 /* duzhuoxin.JPG in Resources */ = {isa = PBXBuildFile; fileRef = A7CD45E225D902D50014EC51 /* duzhuoxin.JPG */; };
 		C70B57A62112AC200024D60B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579C2112AC200024D60B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C70B57A72112AC200024D60B /* VipURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579D2112AC200024D60B /* VipURLManager.m */; };
 		C70B57A82112AC200024D60B /* HybridNSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57A02112AC200024D60B /* HybridNSURLProtocol.m */; };
@@ -193,6 +195,8 @@
 		A79739CA2502110E00654578 /* VipListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VipListModel.m; sourceTree = "<group>"; };
 		A79FD1E62589D01500BDE3C1 /* ShowMemeryTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowMemeryTool.h; sourceTree = "<group>"; };
 		A79FD1E72589D01500BDE3C1 /* ShowMemeryTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowMemeryTool.m; sourceTree = "<group>"; };
+		A7CD45DF25D282300014EC51 /* 高圆圆.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "高圆圆.jpg"; sourceTree = "<group>"; };
+		A7CD45E225D902D50014EC51 /* duzhuoxin.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = duzhuoxin.JPG; sourceTree = "<group>"; };
 		C70B579B2112AC200024D60B /* VipURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipURLManager.h; sourceTree = "<group>"; };
 		C70B579C2112AC200024D60B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		C70B579D2112AC200024D60B /* VipURLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VipURLManager.m; sourceTree = "<group>"; };
@@ -381,6 +385,7 @@
 				C70B579C2112AC200024D60B /* JSONKit.m */,
 				C70B579B2112AC200024D60B /* VipURLManager.h */,
 				C70B579D2112AC200024D60B /* VipURLManager.m */,
+				A7CD45E225D902D50014EC51 /* duzhuoxin.JPG */,
 				C70B579F2112AC200024D60B /* NSURLProtocol */,
 				A79739C92502110E00654578 /* VipListModel.h */,
 				A79739CA2502110E00654578 /* VipListModel.m */,
@@ -480,6 +485,7 @@
 				C72EE442214F460B00288C1C /* home@2x.png */,
 				C72EE443214F460B00288C1C /* live@2x.png */,
 				C72EE44A214F51BC00288C1C /* mine@2x.png */,
+				A7CD45DF25D282300014EC51 /* 高圆圆.jpg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -704,9 +710,11 @@
 				4FB74BAC21CE868A00F52070 /* README.md in Resources */,
 				4357A50C24C92CB500DE8CC3 /* 网易音乐.jpg in Resources */,
 				4357A4FC24C92ABB00DE8CC3 /* 李林杰.jpeg in Resources */,
+				A7CD45E325D902D50014EC51 /* duzhuoxin.JPG in Resources */,
 				4357A4E824C9276A00DE8CC3 /* 芒果TV.jpeg in Resources */,
 				435200C4248E40B7004E882C /* TVLiveList.json in Resources */,
 				4357A50824C92C1100DE8CC3 /* 国外电影.jpg in Resources */,
+				A7CD45E025D282300014EC51 /* 高圆圆.jpg in Resources */,
 				4344691524877FDA000FA605 /* vlist.json in Resources */,
 				4F3A3A29220339B500930A31 /* 爱奇艺@2x.png in Resources */,
 				4F3A3A2B220339B500930A31 /* 优酷@2x.png in Resources */,
@@ -992,13 +1000,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = 5ZS88AX5DM;
+				DEVELOPMENT_TEAM = 7G9RB7APD4;
 				GCC_PREFIX_HEADER = "VipVideo-iPhone/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.winning.MobileDoctor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dhr.demoTest1;
 				PRODUCT_NAME = VipVideo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
@@ -1018,13 +1026,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = 5ZS88AX5DM;
+				DEVELOPMENT_TEAM = 7G9RB7APD4;
 				GCC_PREFIX_HEADER = "VipVideo-iPhone/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.winning.MobileDoctor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dhr.demoTest1;
 				PRODUCT_NAME = VipVideo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;

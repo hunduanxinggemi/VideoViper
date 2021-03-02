@@ -11,7 +11,7 @@
 #import "QSPDownloadTool.h"
 #import "VipURLManager.h"
 #import <Bugly/Bugly.h>
-#import <OOMDetector.h>
+//#import <OOMDetector.h>
 
 @interface AppDelegate ()
 
@@ -23,9 +23,7 @@
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [[OOMDetector getInstance] setupWithDefaultConfig];
-    NSLog(@"这个新分支才有的代,顺带添加一些功能需求");
-    NSLog(@"继续添加需求功能代码");
+//    [[OOMDetector getInstance] setupWithDefaultConfig];
     [NSURLProtocol wk_registerScheme:@"http"];
     [NSURLProtocol wk_registerScheme:@"https"];
 
@@ -43,7 +41,6 @@
     [[QSPDownloadTool shareInstance] startAllTask];
     //向网络请求所有Vip的信息。用于进行判断本机用户是不是会员。
     [VipListModel initVipList];
-
     return YES;
 }
 
